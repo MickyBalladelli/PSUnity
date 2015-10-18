@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 5eba709d2411dc74aa13fca2022c2987
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - terrainTemplate: {fileID: 21848414, guid: fb3f3c157b46fe64baa326f21bce8c99, type: 2}
+  - workingObject: {instanceID: 0}
+  - materialInstance: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 

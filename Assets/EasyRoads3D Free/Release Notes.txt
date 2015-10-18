@@ -1,0 +1,18 @@
+Release Notes 2.5.7 : 22-09-2015 
+
+
+Build for Unity 5
+
+v2 will no longer include new features, for new features and updates we refer to the v3 thread:
+
+http://forum.unity3d.com/threads/easyroads3d-v3-the-upcoming-new-road-system.229327/
+
+
+Install Notes:
+
+To install this update in an existing EasyRoads3D project it is recommended to follow the next steps:
+
+1. Open a new scene.
+2. Remove all the folders and scripts in the folder /Assets/EasyRoads3D/ except sideobjectsLog.er3dObjects . sideobjectsLog.er3dObjects contains all side objects data, do not delete it!
+3. Import the new package
+4. Open your scene.

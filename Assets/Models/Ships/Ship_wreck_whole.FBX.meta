@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 5a37c7aa6774ea74aa31375f4ad3fb9c
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Object1062
+    100002: Object1063
+    100004: ref_ground
+    100006: rocks
+    100008: //RootNode
+    100010: ship_wreck_whole_hull
+    100012: ship_wreck_whole_hull_MeshPart0
+    100014: ship_wreck_whole_hull_MeshPart1
+    100016: ship_wreck_whole_paddles
+    100018: ship_wreck_whole_planks
+    100020: ship_wreck_whole_ribs
+    100022: ship_wreck_whole_spine
+    100024: Group19252
+    100026: ship
+    400000: Object1062
+    400002: Object1063
+    400004: ref_ground
+    400006: rocks
+    400008: //RootNode
+    400010: ship_wreck_whole_hull
+    400012: ship_wreck_whole_hull_MeshPart0
+    400014: ship_wreck_whole_hull_MeshPart1
+    400016: ship_wreck_whole_paddles
+    400018: ship_wreck_whole_planks
+    400020: ship_wreck_whole_ribs
+    400022: ship_wreck_whole_spine
+    400024: Group19252
+    400026: ship
+    2300000: Object1062
+    2300002: ref_ground
+    2300004: rocks
+    2300006: ship_wreck_whole_hull_MeshPart0
+    2300008: ship_wreck_whole_hull_MeshPart1
+    2300010: ship_wreck_whole_paddles
+    2300012: ship_wreck_whole_planks
+    2300014: ship_wreck_whole_ribs
+    2300016: ship_wreck_whole_spine
+    2300018: Group19252
+    2300020: ship
+    3300000: Object1062
+    3300002: ref_ground
+    3300004: rocks
+    3300006: ship_wreck_whole_hull_MeshPart0
+    3300008: ship_wreck_whole_hull_MeshPart1
+    3300010: ship_wreck_whole_paddles
+    3300012: ship_wreck_whole_planks
+    3300014: ship_wreck_whole_ribs
+    3300016: ship_wreck_whole_spine
+    3300018: Group19252
+    3300020: ship
+    4300000: ship_wreck_whole_ribs
+    4300002: Object1062
+    4300004: ship_wreck_whole_hull_MeshPart0
+    4300006: ship_wreck_whole_hull_MeshPart1
+    4300008: ship_wreck_whole_paddles
+    4300010: ship_wreck_whole_planks
+    4300012: rocks
+    4300014: ship_wreck_whole_spine
+    4300016: ref_ground
+    4300018: Group19252
+    4300020: ship
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    pivotNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 

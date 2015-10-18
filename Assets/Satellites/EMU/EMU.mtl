@@ -1,0 +1,170 @@
+newmtl EMU:emusuit21_blinn1SG
+illum 4
+Kd 0.69 0.42 0.22
+Ka 0.00 0.00 0.00
+Tf 0.32 0.32 0.32
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_blinn2SG
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_blinn3SG
+illum 4
+Kd 0.50 0.38 0.14
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_blinn12SG
+illum 4
+Kd 0.77 0.36 0.14
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_body_lambert2SG
+illum 4
+Kd 0.82 0.83 0.90
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_emusuit4_justbody_blinn3SG
+illum 4
+Kd 0.62 0.48 0.17
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+Ns 0.06
+newmtl EMU:emusuit21_emusuit4_justbody_lambert2SG
+illum 4
+Kd 0.93 0.93 0.93
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_emusuit5_blinn1SG
+illum 4
+Kd 0.69 0.42 0.22
+Ka 0.00 0.00 0.00
+Tf 0.32 0.32 0.32
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_emusuit5_blinn2SG
+illum 4
+Kd 0.60 0.60 0.60
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_emusuit5_blinn3SG
+illum 4
+Kd 0.50 0.38 0.14
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl EMU:emusuit21_emusuit5_jetpack2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd emusuitFLAGpatch.png
+Ni 1.00
+newmtl EMU:emusuit21_emusuit5_lambert2SG
+illum 4
+Kd 0.93 0.93 0.93
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_emusuit5_lambert3SG
+illum 4
+Kd 0.75 0.26 0.11
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_emusuit5_lambert5SG
+illum 4
+Kd 0.41 0.30 0.27
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_jetpack2SG
+illum 4
+Kd 0.95 0.94 0.93
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_lambert2SG
+illum 4
+Kd 0.93 0.93 0.93
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_lambert3SG
+illum 4
+Kd 0.92 0.72 0.66
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_lambert4SG
+illum 4
+Kd 0.94 0.14 0.16
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_lambert5SG
+illum 4
+Kd 0.86 0.84 0.84
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd emusuitbox4.png
+Ni 1.00
+newmtl EMU:emusuit21_lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd emusuitvitruvianpatch.png
+Ni 1.00
+newmtl EMU:emusuit21_lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd emusuitFLAGpatch.png
+Ni 1.00
+newmtl EMU:emusuit21_lambert10SG
+illum 4
+Kd 0.92 0.92 0.92
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:emusuit21_lambert11SG
+illum 4
+Kd 0.67 0.45 0.38
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl EMU:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00

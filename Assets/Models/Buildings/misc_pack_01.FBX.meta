@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: 793b5bd3e0c0eaf47ac1e776579c2175
+timeCreated: 1433344754
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Barrel_shelter_barrels
+    100002: Barrel_shelter_ivy
+    100004: Barrel_shelter_planks
+    100006: Corner_01_barrel
+    100008: Corner_01_bucket
+    100010: Corner_01_ivy
+    100012: Corner_01_planks
+    100014: Ivy_01
+    100016: Ivy_02
+    100018: Ivy_03
+    100020: Ivy_04
+    100022: Ivy_05
+    100024: Ivy_05_wheel
+    100026: Ivy_06
+    100028: Ivy_07
+    100030: Ivy_08
+    100032: //RootNode
+    100034: moss_01
+    100036: moss_02
+    100038: Steps_01
+    100040: Steps_02
+    400000: Barrel_shelter_barrels
+    400002: Barrel_shelter_ivy
+    400004: Barrel_shelter_planks
+    400006: Corner_01_barrel
+    400008: Corner_01_bucket
+    400010: Corner_01_ivy
+    400012: Corner_01_planks
+    400014: Ivy_01
+    400016: Ivy_02
+    400018: Ivy_03
+    400020: Ivy_04
+    400022: Ivy_05
+    400024: Ivy_05_wheel
+    400026: Ivy_06
+    400028: Ivy_07
+    400030: Ivy_08
+    400032: //RootNode
+    400034: moss_01
+    400036: moss_02
+    400038: Steps_01
+    400040: Steps_02
+    2300000: Barrel_shelter_barrels
+    2300002: Barrel_shelter_ivy
+    2300004: Barrel_shelter_planks
+    2300006: Corner_01_barrel
+    2300008: Corner_01_bucket
+    2300010: Corner_01_ivy
+    2300012: Corner_01_planks
+    2300014: Ivy_01
+    2300016: Ivy_02
+    2300018: Ivy_03
+    2300020: Ivy_04
+    2300022: Ivy_05
+    2300024: Ivy_05_wheel
+    2300026: Ivy_06
+    2300028: Ivy_07
+    2300030: Ivy_08
+    2300032: moss_01
+    2300034: moss_02
+    2300036: Steps_01
+    2300038: Steps_02
+    3300000: Barrel_shelter_barrels
+    3300002: Barrel_shelter_ivy
+    3300004: Barrel_shelter_planks
+    3300006: Corner_01_barrel
+    3300008: Corner_01_bucket
+    3300010: Corner_01_ivy
+    3300012: Corner_01_planks
+    3300014: Ivy_01
+    3300016: Ivy_02
+    3300018: Ivy_03
+    3300020: Ivy_04
+    3300022: Ivy_05
+    3300024: Ivy_05_wheel
+    3300026: Ivy_06
+    3300028: Ivy_07
+    3300030: Ivy_08
+    3300032: moss_01
+    3300034: moss_02
+    3300036: Steps_01
+    3300038: Steps_02
+    4300000: Ivy_05_wheel
+    4300002: Ivy_05
+    4300004: Ivy_01
+    4300006: Ivy_06
+    4300008: Ivy_04
+    4300010: Ivy_03
+    4300012: Ivy_02
+    4300014: Corner_01_ivy
+    4300016: Corner_01_bucket
+    4300018: Corner_01_barrel
+    4300020: Corner_01_planks
+    4300022: Steps_01
+    4300024: Steps_02
+    4300026: Ivy_08
+    4300028: Barrel_shelter_planks
+    4300030: Barrel_shelter_ivy
+    4300032: Barrel_shelter_barrels
+    4300034: Ivy_07
+    4300036: moss_01
+    4300038: moss_02
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

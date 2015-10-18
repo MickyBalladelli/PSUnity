@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: ee0f85fc54413ff4c8da21bbf88ce246
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: metals_craps_Element
+    100004: metals_craps_Element001
+    100006: metals_craps_Element002
+    100008: metals_craps_Element003
+    100010: metals_craps_Element004
+    100012: metals_craps_Element005
+    100014: metals_craps_Element006
+    100016: metals_craps_Element007
+    100018: metals_craps_Element008
+    100020: metals_craps_Element009
+    100022: metals_craps_Element010
+    100024: metals_craps_Element011
+    100026: metals_piece_Element
+    100028: metals_piece_Element001
+    100030: metals_piece_Element002
+    100032: metals_piece_Element003
+    100034: metals_piece_Element004
+    100036: metals_piece_Element005
+    100038: metals_piece_Element006
+    100040: metals_piece_Element007
+    100042: metals_piece_Element008
+    100044: metals_piece_Element009
+    100046: metals_piece_Element010
+    100048: metals_piece_Element011
+    400000: //RootNode
+    400002: metals_craps_Element
+    400004: metals_craps_Element001
+    400006: metals_craps_Element002
+    400008: metals_craps_Element003
+    400010: metals_craps_Element004
+    400012: metals_craps_Element005
+    400014: metals_craps_Element006
+    400016: metals_craps_Element007
+    400018: metals_craps_Element008
+    400020: metals_craps_Element009
+    400022: metals_craps_Element010
+    400024: metals_craps_Element011
+    400026: metals_piece_Element
+    400028: metals_piece_Element001
+    400030: metals_piece_Element002
+    400032: metals_piece_Element003
+    400034: metals_piece_Element004
+    400036: metals_piece_Element005
+    400038: metals_piece_Element006
+    400040: metals_piece_Element007
+    400042: metals_piece_Element008
+    400044: metals_piece_Element009
+    400046: metals_piece_Element010
+    400048: metals_piece_Element011
+    2300000: metals_craps_Element
+    2300002: metals_craps_Element001
+    2300004: metals_craps_Element002
+    2300006: metals_craps_Element003
+    2300008: metals_craps_Element004
+    2300010: metals_craps_Element005
+    2300012: metals_craps_Element006
+    2300014: metals_craps_Element007
+    2300016: metals_craps_Element008
+    2300018: metals_craps_Element009
+    2300020: metals_craps_Element010
+    2300022: metals_craps_Element011
+    2300024: metals_piece_Element
+    2300026: metals_piece_Element001
+    2300028: metals_piece_Element002
+    2300030: metals_piece_Element003
+    2300032: metals_piece_Element004
+    2300034: metals_piece_Element005
+    2300036: metals_piece_Element006
+    2300038: metals_piece_Element007
+    2300040: metals_piece_Element008
+    2300042: metals_piece_Element009
+    2300044: metals_piece_Element010
+    2300046: metals_piece_Element011
+    3300000: metals_craps_Element
+    3300002: metals_craps_Element001
+    3300004: metals_craps_Element002
+    3300006: metals_craps_Element003
+    3300008: metals_craps_Element004
+    3300010: metals_craps_Element005
+    3300012: metals_craps_Element006
+    3300014: metals_craps_Element007
+    3300016: metals_craps_Element008
+    3300018: metals_craps_Element009
+    3300020: metals_craps_Element010
+    3300022: metals_craps_Element011
+    3300024: metals_piece_Element
+    3300026: metals_piece_Element001
+    3300028: metals_piece_Element002
+    3300030: metals_piece_Element003
+    3300032: metals_piece_Element004
+    3300034: metals_piece_Element005
+    3300036: metals_piece_Element006
+    3300038: metals_piece_Element007
+    3300040: metals_piece_Element008
+    3300042: metals_piece_Element009
+    3300044: metals_piece_Element010
+    3300046: metals_piece_Element011
+    4300000: metals_craps_Element
+    4300002: metals_craps_Element001
+    4300004: metals_craps_Element002
+    4300006: metals_craps_Element003
+    4300008: metals_craps_Element004
+    4300010: metals_craps_Element005
+    4300012: metals_craps_Element006
+    4300014: metals_craps_Element007
+    4300016: metals_craps_Element008
+    4300018: metals_craps_Element009
+    4300020: metals_craps_Element010
+    4300022: metals_craps_Element011
+    4300024: metals_piece_Element
+    4300026: metals_piece_Element001
+    4300028: metals_piece_Element002
+    4300030: metals_piece_Element003
+    4300032: metals_piece_Element004
+    4300034: metals_piece_Element005
+    4300036: metals_piece_Element006
+    4300038: metals_piece_Element007
+    4300040: metals_piece_Element008
+    4300042: metals_piece_Element009
+    4300044: metals_piece_Element010
+    4300046: metals_piece_Element011
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

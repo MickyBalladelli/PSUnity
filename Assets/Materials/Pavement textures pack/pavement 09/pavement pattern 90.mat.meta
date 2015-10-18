@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f9382b6ee249484cbcff1dffda47574
+labels:
+- Architecture
+- Brick
+- Grass
+- Ground
+- Nature
+- Pattern
+- Pavement
+- Tile
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

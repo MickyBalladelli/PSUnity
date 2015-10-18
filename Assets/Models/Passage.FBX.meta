@@ -1,0 +1,116 @@
+fileFormatVersion: 2
+guid: 0a7f1467a12dc4f4fb6311df5d751fe3
+timeCreated: 1432021797
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Beach_entrance_arcs
+    100002: Beach_entrance_clovers
+    100004: Beach_entrance_grass
+    100006: Beach_entrance_ground
+    100008: Beach_entrance_stone_01
+    100010: Beach_entrance_stone_floor
+    100012: Beach_entrance_wall
+    100014: Object026
+    100016: Object477
+    100018: //RootNode
+    400000: Beach_entrance_arcs
+    400002: Beach_entrance_clovers
+    400004: Beach_entrance_grass
+    400006: Beach_entrance_ground
+    400008: Beach_entrance_stone_01
+    400010: Beach_entrance_stone_floor
+    400012: Beach_entrance_wall
+    400014: Object026
+    400016: Object477
+    400018: //RootNode
+    2300000: Beach_entrance_arcs
+    2300002: Beach_entrance_clovers
+    2300004: Beach_entrance_grass
+    2300006: Beach_entrance_ground
+    2300008: Beach_entrance_stone_01
+    2300010: Beach_entrance_stone_floor
+    2300012: Beach_entrance_wall
+    2300014: Object026
+    2300016: Object477
+    3300000: Beach_entrance_arcs
+    3300002: Beach_entrance_clovers
+    3300004: Beach_entrance_grass
+    3300006: Beach_entrance_ground
+    3300008: Beach_entrance_stone_01
+    3300010: Beach_entrance_stone_floor
+    3300012: Beach_entrance_wall
+    3300014: Object026
+    3300016: Object477
+    4300000: Beach_entrance_wall
+    4300002: Beach_entrance_ground
+    4300004: Beach_entrance_arcs
+    4300006: Object026
+    4300008: Beach_entrance_stone_01
+    4300010: Beach_entrance_stone_floor
+    4300012: Beach_entrance_clovers
+    4300014: Beach_entrance_grass
+    4300016: Object477
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

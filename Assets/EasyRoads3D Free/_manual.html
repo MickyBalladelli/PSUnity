@@ -1,0 +1,643 @@
+<html>
+	
+	<head>
+		<title>EasyRoads3D Manual</title>
+
+	    <style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px; line-height:20px
+}
+.style2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; }
+.style3 {color: #FF0000}
+.style6 {color: #FF0000; font-weight: bold; }
+
+A.link:visited{color:#1B50A7; font-family: Verdana, Arial, sans-serif; font-size: 12px; font-weight: bold; text-decoration:none;}
+A.link:link{color:#1B50A7; font-family: Verdana, Arial, sans-serif;font-size: 12px; font-weight: bold; text-decoration:none;}
+A.link:hover{color:#1B50A7; font-family: Verdana, Arial, sans-serif; font-size: 12px; font-weight: bold; text-decoration: underline;}
+A.link:active{color:#1B50A7; font-family: Verdana, Arial, sans-serif;font-size: 12px; font-weight: bold; text-decoration:none;}
+.style7 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; }
+.style8 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: 20px; font-weight: bold; }
+.style9 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+}
+
+-->
+        </style>
+</head>
+
+	<body>
+	<center>
+		
+			<h2 class="style7">&nbsp;</h2>			
+			
+			
+
+			<h5><a href="http://unity3d.com" style="text-decoration: none; color: black;"></a></h5>
+			<table width="900" border="0" align="center" class="style1">
+              <tr>
+                <td><p><span class="style7">Easyroads3D V2 Manual </span></p>
+                  <hr noshade style="height:1px">
+                  <p>1. <a href="#quickstart" class="link">Quick Start</a><br>
+                    2. <a href="#download" class="link">Download files</a><br>
+                  3. <a href="#install" class="link"><strong>Add the EasyRoads3D tool to your project</strong></a><br>
+                  4. <a href="#menu" class="link">EasyRoads3D Menu </a><br>
+                  5. <a href="#gettingstarted" class="link">Getting started creating a Road</a></p>
+                  <ul>
+                    <li><a href="#addtmarkers" class="link">Add road markers</a></li>
+                    <li><a href="#insertmarkers" class="link">Insert road markers</a></li>
+                    <li><a href="#properties" class="link">Marker properties</a></li>
+                    <li><a href="#sideObjectMarker" class="link">Side Object Marker properties</a></li>
+                    <li><a href="#terrain" class="link">Deforming the Terrain</a></li>
+                    <li><a href="#road" class="link">Road Geometry Properties</a></li>
+                    <li><a href="#splatexp" class="link">Terrain Splatmap Handling</a></li>
+                  </ul>
+                  <p>6. <a href="#settings" class="link">General Settings<br>
+                  </a>7. <a href="#rivers" class="link">The River Object</a><br>
+                    8. <a href="#sideobjects" class="link">Side Objects</a><br>
+                    9. <a href="#customObjects" class="link">Procedural Mesh Object</a><br>
+                    10. <a href="#notes" class="link">Useful Notes / changes to previous versions </a><br>
+                    11. <a href="#errors" class="link">Error Messages</a><br>
+                    12. <a href="#trouble" class="link">Troubleshooting</a><br>
+                    13. <a href="#todo" class="link">To Do / Known issues </a> </p>
+<hr noshade style="height:1px">
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>QUICK START</strong><span class="style2"><a name="quickstart" id="download2"></a></span></p>
+<p class="style1">1. Import the EasyRoads3D package in your project. <a href="#install" class="link">More Info...</a></p>
+                  <p class="style1">2. You will see a new menu item &quot;EasyRoads3D&quot;  in the top horizontal menu under GameObject &gt; Create Other &gt;  EasyRoads3D. Select &quot;New EasyRoads3D Object&quot; from the EasyRoads3D menu. In the <a href="#newobject" class="link">window</a> that will appear you can select the object type and you can set the name for the new object. Select &quot;Road Object&quot; as the object type<strong> </strong>and optionally change the name that is displayed by default. <a href="#newobject" class="link">More Info...</a></p>
+                  <p class="style1"> A new EasyRoads3D road object with the <A class="link" href="#newobject"></A>name you entered is created in the scene hierarchy. It will  be selected automatically and in the Inspector you will see the EasyRoads3D Toolbar.<img src="images/menugui.jpg" alt="" width="300" height="122" style="vertical-align:top"> <a href="#gettingstarted" class="link">More Info...</a></p>
+                  <p class="style1">3. Select the most left &quot;Add Markers&quot; tab, hold the [Shift] key and click in scene view on the terrain where you want to start the road. Continue adding markers by holding the [shift] key and clicking in scene view on the terrain defining the shape of the road. These are the control points that will define the shape of the road. After placing 3 markers they will start to connect. The white surfaces represent the shape to which the terrain will be adjusted. The road mesh itself will also become visible. Please <a href="#trouble" class="link">click here</a> if at this stage you cannot see the road and white surface mesh. <a href="#addmarkers" class="link">More Info...</a></p>
+                  <p class="style1">4. Click the middle mountain (Level terrain) tab in the above toolbar to start deforming the terrain heightmap according the road shape. This may take a while depending on the road shape, length and the terrains heightmap resolution. When finished, the white surfaces will disappear and the terrain will match the road mesh.</p>
+                  <p class="style1" style="font-size:12px"><strong>You have created your first road with EasyRoads3D!</strong></p>
+                  <p class="style1">You can now tweak the final build settings for the <a href="#road" class="link">road</a> and the <a href="#splatexp" class="link">terrain</a>. Or you can click the middle mountain tab again to switch back to Edit Mode and <a href="#addmarkers" class="link">add more markers</a>, <a href="#insertmarkers" class="link">Insert Markers</a> or tweak <a href="#properties" class="link">marker specific settings</a> <strong>(Full version & Pro only)</strong>. </p>
+                  <p class="style1">After getting familiar with all these road specific features it is time to start with the <a href="#sideobjects" class="link">Side Objects features</a>. <strong>(Full version & Pro only)</strong> For this it is recommended to have a close look at the demo project. It includes various type of ide objects. You can see how they are build in the <a href="#sideobjectmanager" class="link">Side Object Manager</a> and how they are used in the scene regarding <a href="#sideobjectsMarker" class="link">marker specific settings</a> and <a href="#sideobjectinpector" class="link">side object specific Inspector settings</a>.</p>
+                  <p class="style1">&nbsp;</p>
+                  <hr noshade style="height:1px">
+                  <p class="style1">&nbsp;</p>
+                  <p class="style2">DOWNLOAD FILES FROM www.unityterraintools.com<a name="download" id="download"></a></p>
+                  <p class="style1">The zip file contains the following items:</p>
+                  <p class="style1">1. EasyRoads3D.unityPackage <br>
+                  2. Manual<br>
+                  3. licence <br>
+                  </p>
+                  <hr noshade style="height:1px">
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>ADD THE EASYROADS3D TOOL TO YOUR PROJECT</strong><span class="style2"><a name="install"></a></span></p>
+                  <p class="style1">This applies to packages downloaded from our website. Assetstore packages should directly import.</p>
+                  <p class="style1">Menu &gt; Assets &gt; Import Package &gt; Custom Package...</p>
+<p class="style1">This will open the file dialog window. Browse to the EasyRoads3D folder and select the EasyRoads3D.unityPackage.</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>Put the EasyRoads3D unityPackage in the folder Unity\Editor\Standard Packages. You will be able to include it to new projects just like for example the Standard Assets and Toon Shading packages</td>
+                    </tr>
+                  </table>
+                  <p class="style1">All necessary assets will be imported in your project. A new menu item <strong>EasyRoads3D </strong>will be available in the top menu. Click on an empty area in the top menu bar if the EasyRoads3D menu is not visible.</p>
+                  <p class="style1">After <a href="#newobject" class="link">creating your first road object</a> and selecting this object you will be asked to enter license info:</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="400" align="center"><img src="images/licenseInfo.jpg" width="260" height="210"></td>
+                      <td valign="top"><p>Fill in your serial number,  your name and email address. <strong>Save the scene</strong> and <strong>RESTART</strong> Unity after you received the confirmation that registration was successful.
+                      </p>
+                      <p><strong>NOTE:</strong>  make sure that the project Build Settings are NOT set to Webplayer, it will not be possible to connect to the server. Just set it temporarily to Standalone. You can switch back to Webplayer after registration.</p>
+                      <p><strong>NOTE:</strong> The free version does not require registration.</p></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="45" valign="top"><strong>NOTE:</strong></td>
+                      <td>The free package does not require registration!</td>
+                    </tr>
+                  </table>
+                  <p class="style1"><br>
+                  </p>
+                  <hr noshade style="height:1px">
+                  <p class="style1">&nbsp;</p>
+                  <p class="style2">EASYROADS3D MENU <a name="menu" id="menu"></a></p>
+                  <p class="style1">You can find the EasyRoads3D Menu  in the top horizontal menu under GameObject &gt; Create Other &gt; EasyRoads3D</p>
+                  <p class="style1"><a href="#newobject" class="link">1. New EasyRoads3D Object</a><br>
+                    <a href="#backupheights" class="link">2. Backup Terrain Height Data</a><br>
+                    <a href="#restoreheights" class="link">3. Restore Terrain Height Data</a><br>
+                    <a href="restoreheights" class="link">4. Backup Terrain Splatmaps</a><br>
+                  <a href="#restoresplatmap" class="link">5. Restore Terrain Splatmaps</a><br>
+                  <a href="#backupvegetation" class="link">6. Backup Terrain Vegetation</a><br>
+                  <a href="#restorevegetation" class="link">7. Restore Terrain Vegetation</a><br>
+                  8. 
+                  <a href="#sideobjectManagerMenu" class="link">Side Objects</a> <span class="style2"> (Full version &amp; Pro only)</span><br>
+                    <a href="#buildobjects" class="link">9. Build EasyRoads3D Objects</a> <span class="style2"> (Full version &amp; Pro only)</span><br>
+                    <br>
+                  </p>
+<p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>1. New EasyRoads3D Object</strong><a name="#newobject" id="#newobject"></a>&aelig;</p>
+                  <p class="style1">Select this menu item to add a new EasyRoads3D road object to the scene.</p>
+                  <p class="style1"><img src="images/newObject.jpg" width="370" height="156"></p>
+                  <p class="style1"> A dialog window will appear where you can set the name of the new object and select the type of EasyRoads3D object, road or river. After clicking the &quot;Create Object&quot; button the new EasyRoads3D object will be added to the scene. </p>
+                  <p class="style1">After the road object is created some other processes are executed. A temporary script will be attached to all terrain objects. This script is used to identify the terrain. Backups of the original terrain height data and splatmaps will be save in the folder EasyRoads3D/&lt;terrainid&gt; and can be used at any time to restore the terrain at any stage to its original state.</p>
+                  <p class="style2">2.  Backup Terrain Height Data (Full version &amp; Pro only)<a name="#backupheights" id="#backupheights"></a></p>
+                  <p class="style1">Execute this option to update the terrain height data backups after making changes to the terrain. You will always have a fresh backup of the terrain height data! </p>
+                  <p class="style2">3. Restore Terrain Height Data (Full version &amp; Pro only)<a name="#restoreheights" id="#restoreheights"></a></p>
+                  <p class="style1">Execute this option if you want to restore the terrain height data to its original state. Terrain height data is automatically restored when switching between Edit and Terrain mode. </p>
+                  <p class="style2">4. Backup Terrain Splatmaps (Full version &amp; Pro only)<a name="#backupsplatmap" id="#backupsplatmap"></a></p>
+                  <p class="style1">Execute this option to update the terrain splatmap data backups after making changes to the terrain splatmap(s). You will always have a fresh backup of the terrain splatmap(s)! In the case of multiple terrains in the scene, first select the terrain you want to backup  otherwise <a href="#activeTerrain" class="link">the terrain selected in General Settings</a> will be backed up.</p>
+                  <p class="style1"><strong>5. Restore Terrain Splatmaps<span class="style2"> (Full version &amp; Pro only)</span></strong><a name="#restoresplatmap" id="#restoresplatmap"></a></p>
+                  <p class="style1">Execute this option if you want to restore the terrain splatmap data to its original state. The terrain splatmap data is automatically restored when switching between Edit and Terrain mode. Optionally you may also select a texture with the manually edited road splatmap. The road shape will be blended in the terrain splatmap(s). In the case of multiple terrains in the scene, first select the terrain you want to restore  otherwise <a href="#" class="link">the terrain selected in General Settings</a> will be restored. </p>
+                  <p class="style2">6. Backup Terrain Vegetation (Full version &amp; Pro only)<a name="#backupvegetation" id="#restoresplatmap2"></a></p>
+                  <p class="style1">Execute this option to update the terrain vegetation data backups after adding or removing trees or detail objects. You will always have a fresh backup of the terrain vegetation data!</p>
+                  <p class="style2">7. Restore Terrain Vegetation (Full version &amp; Pro only)<a name="#restorevegetation" id="#restoresplatmap3"></a></p>
+                  <p class="style1">Execute this option if you want to restore the terrain vegetation data to its original state. Vegetation data is automatically restored when switching back from Terrain mode to Edit mode. </p>
+                  <p class="style2">8. Side Objects (Full version &amp; Pro only)<a name="#sideobjectManagerMenu" id="#buildobjects2"></a></p>
+                  <p class="style1">This will open the Side Object Manager. Use it to create and edit <a href="#sideobjects" class="link">side objects</a>.</p>
+                  <p class="style2">9. Build EasyRoads3D Objects (Full version &amp; Pro only)<a name="#buildobjects" id="#buildobjects"></a></p>
+                  <p class="style1">Execute this option when you are ready with all EasyRoads3D terrain objects in the scene. If not already done, the terrain will be leveled according the created road objects, road geometry, side objects and terrain splatmaps will be created according the settings and all EasyRoads3D editor objects will be destroyed including the temporary script added to terrain objects in the scene. This process will also automatically save the road geometry in the folder project/EasyRoads3D/[roadname]/ under the same as the EasyRoads3D object name with &quot;_final&quot; added to it. </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>Make a backup of the scene with all EasyRoads3D objects. You will be able to fall back on it would you have to make changes changes.</td>
+                    </tr>
+                  </table>
+                  <br>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="45" valign="top"><strong>NOTE:</strong></td>
+                      <td>This action is permanent, all control data will be lost if you save the scene after executing this task! However should something go wrong or you do want to undo this action, do not save the scene. Instead open for example a new scene and then reopen this scene. All EasyRoads3D object should still be there.</td>
+                    </tr>
+                  </table>
+                  <p class="style1"><br>
+                  </p>
+<hr noshade style="height:1px">
+                  <p class="style1">&nbsp;</p>
+                  <p class="style2">GETTING STARTED CREATING THE ROAD <a name="gettingstarted" id="gettingstarted"></a></p>
+                  <p class="style1">Select  <strong>New EasyRoads3D Object</strong> from the EasyRoads3D Menu. A dialog window will appear where you can name the new road object. The new road object will be added to the hierarchy panel after clicking the <strong>Create Object</strong> button.</p>
+                  <p class="style1">In the property Inspector you will see the EasyRoads3D toolbar:</p>
+                  <p class="style1"><img src="images/menugui.jpg" width="300" height="122"></p>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>ADD ROAD MARKERS</strong> <a name="addmarkers" id="addmarkers"></a></p>
+                  <p class="style1">Add road markers by activating the Add Markers toolbar tab. Move the mouse to the position where you want the road to start and click the left mouse button while holding the [shift] key. </p>
+                  <p class="style1">Continue adding markers according the shape of the desired road. You will see that the road system will create surfaces representing the road and the affected surrounding which are configurable in <a href="#generalsettings" class="link">General Settings</a>. </p>
+                  <p class="style1"><strong>NOTE:</strong> Make sure the scene camera is in perspective mode when adding or inserting markers. In isometric mode the markers will be placed in the center of the screen!</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>For the best results (smoothly bending roads) and road shape control, add markers at more or less equal distances from each other. Avoid big irregular distances between consecutive markers.</td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style2">INSERT ROAD MARKERS  <a name="insertmarkers" id="insertmarkers"></a></p>
+                  <p class="style1"> Insert road markers works similar as adding road markers but instead of adding the marker at the end of the road, it will insert the marker between the 2 closest markers to the mouse position. Make sure you are in Insert Markers mode by activating the Insert Markers  toolbar tab! <br>
+                  </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td><strong>NOTE: </strong>In order to add or insert markers make sure <img src="images/unity_mode.jpg" width="140" height="27" style="vertical-align:25%"> is active! </td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style2">MARKER PROPERTIES <a name="properties" id="properties"></a></p>
+                  <p class="style1">Click on one of the generated surfaces to change its properties. </p>
+                  <p class="style1"><span class="style2">Soft Selection: </span>When enabled for the selected marker all other markers within the entered soft selection distance will be affected to an extend as the distance to the selected marker.</p>
+                  <p class="style1"><a name="indents"></a><strong>Left/Right Indent. </strong>Use this feature to increase the distance between the road and the edge where the terrain has the same height as the road. This is useful in hilly areas to avoid the terrain break through the road because of the Unity terrain LOD system. (In the free version only the right indents are editable)</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>Sometimes you will see the terrain pop through the road. Usually this happens in case of significant height differences between the road and the original terrain height. Try increasing the indent values at these spots, you will probably get better results!  It is also worth while to check the pixelError setting in Terrain &gt; Settings. Higher values will result in the terrain popping through the road unless you raise the road far enough above the ground. </td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp; </p>
+                  <p class="style1"><strong>Left/Right Surrounding: </strong>This represents the distance used to level the area between the road and the current terrain height. This property gives you full control over the area around the road, especially in hilly areas. (In the free version only the right surrounding is editable)</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>It is recommended to experiment with the surrounding settings together with the soft selection tool. You can get spectacular results. It can be used as a terrain shaping tool by itself. </td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>Left/Right Tilting <span class="style2">(Full version &amp; Pro only)</span>. </strong>This feature will lift the road up to a maximum of the road width minus 1 meter. You will get the best results when used together with the soft selection tool so the tilting affects all road surfaces in a bended road. (In the free version only  right tilting is editable)</p>
+                  <p><span class="style2"><a name="refreshsurfaces" id="refreshsurfaces"></a>Refresh Surfaces (). </span>By default the road surfaces will be updated instantly after changing one of the above settings. However when Auto Updates in <a href="#generalsettings" class="link">General Settings</a> is toggled off this will not be the case. Click the <strong>Refresh Surface</strong> button to update the surfaces manually.</p>
+                  <p class="style1"><strong>Delete Road Marker.</strong> Clicking this button will remove the selected road marker. </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>Especially when using soft selection on a large distance repositioning can take quite some processing. If it runs too slow, press [shift] while moving the gizmo. This will only move the road markers. After releasing [shift] and the mouse button the surfaces will be updated.</td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp; </p>
+                  <p><span class="style2">Bridge Object (Full version &amp; Pro only):</span> Activate this toggle  to create bridges. The terrain will not be deformed while the road geometry will still follow the marker positions. </p>
+                  <p class="style1"><span class="style2">Distribute Heights:</span> This toggle is associated with bridge objects. Activating it will distribute the road surface heights evenly from the previous marker position to the terrain height at the selected marker position. This feature is useful to create realistic viaducts. </p>
+                  <p class="style1"><strong>Creating Bridges</strong> <a name="bridge" id="bridge"></a></p>
+                  <p class="style1">Simply select a marker, make sure the road surface area between this marker and the previous marker is raised above the ground and check &quot;Bridge Object&quot;. You will see that the white surfaces disappear. This means that the terrain will not be adjusted for this part of the road. Alternatively you can check &quot;Distribute Heights&quot; which will gradually lower the terrain from the previous marker to the terrain height at the selected marker. The shape will be visually represented by the white surfaces. A bridge with distributed heights enabled, consists of at least 3 markers:</p>
+                  <ol>
+                    <li class="style1"> The start of the bridge, &quot;Distribute heights&quot; checked, make sure this marker is raised above the terrain or just before something like a ravine where the bridge starts.</li>
+                    <li class="style1"> One or more middle segments, with &quot;Distribute heights&quot; unchecked, make sure this marker is raised above the terrain </li>
+                    <li class="style1">The end of the bridge, with &quot;Distribute heights&quot; checked, at this point the terrain will be leveled up till the height of this marker.</li>
+                  </ol>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>The best workflow to create bridges is, first make sure the shape of the road that will cover the bridge is smooth. Afterwards check the bridge objects for the affected surfaces. </td>
+                    </tr>
+                  </table>
+                  <br>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="45" valign="top"><strong>Note:</strong></td>
+                      <td>You cannot set the first two markers of a road object as a bridge object. This is mentioned in the Inspector when selecting the first or second marker.</td>
+                    </tr>
+                  </table>
+<p>&nbsp;</p>
+                  <p class="style1"><strong>Start New LOD Segment <span class="style2"> (Full version &amp; Pro only)</span>:<a name="lodsegments"></a></strong> In EasyRoads3d v2 you can create and save your road geometry in different LOD segments. Simply check this checkbox when you want to start a new road LOD segment at the selected marker. When rendering the road object you will see that the road asset in the hierarchy now has a number of child assets matching the number of LOD segments. Exporting the road geometry will save each segment in its own group. To create the geometry for your LOD system,  export the road with a high resolution, rename the files, switch to a lower resolution and again save the road.</p>
+                  <p class="style1">&nbsp; </p>
+                  <p class="style1"><strong>Additional Marker Functions</strong></p>
+                  <p class="style1">When two markers are selected you will see the below buttons in the Inspector:</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="280"><img src="images/markerAdditional.jpg" width="261" height="173"></td>
+                      <td valign="top"><p><strong>Align XYZ:</strong> This will align all markers between the two selected markers on a straight line</p>
+                      <p><strong>Align XZ:</strong> This will align all markers between the two selected markers on the x and z-axis</p>
+                      <p> <strong>Align XZ Snap Y:</strong> This will align all markers between the two selected markers on the x and z-axis and snap the y position to the terrain height at that position.</p>
+                      <p><strong>Average Heights:</strong> This will average the heights of all markers between the two selected markers.</p></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td>Hold [ctrl] while moving markers to snap the marker to the terrain height at the new position.</td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>SIDE OBJECT MARKER PROPERTIES</strong> <span class="style2"> (Full version &amp; Pro only)</span><a name="sideObjectMarker"></a></p><!-- [[serial]]//-->
+                  <p class="style1">By default markers cannot be accessed when road objects are in render mode (see just below). However when side objects have been built in render mode you will see that the marker objects appear again. By selecting a marker you can adjust the side object settings for this marker for any of the available side objects. Depending on the type of side object you will see the following properties:</p>
+                  <p class="style1"><strong>Selected Object:</strong> this is a combobox with all available side objects. Select the side object from the list you want to edit.</p>
+                  <p class="style1"><strong>Display Object:</strong> Toggle this on/off when you want to render the selected side object for the selected marker.</p>
+                  <p class="style1"><strong>Spline Node:</strong> Toggle this respectively on/off when you want to use this marker for the spline shape. The road scene in the demo project uses this feature for the &quot;Right Fence&quot; in the sharp corner. It cuts of a large part of the road shape. This allows you to create shapes that run independently from the actual road shape.</p>
+                  <p class="style1"><strong>Distance Sideways:</strong> This allows you to move the spline path for the selected side object away from the road shape.                  </p>
+                  <p class="style1"><br>
+                  </p>
+                  <hr noshade style="height:1px">
+                  <p class="style2">&nbsp;</p>
+                  <p class="style2">DEFORMING THE TERRAIN  <a name="terrain" id="terrain"></a></p>
+                  <p class="style1">Click the Level Terrain tab on the toolbar  to level the terrain according to the created road and road surrounding surfaces. Depending on the resolution of the terrain and the size of the road this may take a while. </p>
+                  <p class="style1">Click the Level Terrain Tab again to switch back to &quot;Edit Mode&quot; and continue adding markers or tweaking markers settings (Full version &amp; Pro only).</p>
+                  <p class="style1">Clicking the Terrain tab from the marker toolbar will select the main road object first. In this case, click this tab again to activate the terrain rendering. </p>
+                  <p class="style1"><strong>NOTE:</strong> If you save a scene while an EasyRoads3D objects is in &quot;Render&quot; state and then close Unity, these objects will automatically switch back to edit mode after reopening the scene. This is to make sure the EasyRoads3D object is correctly initialized on startup and also to ensure that the original terrain data is preserved. It is therefor recommended to save your scenes with all EasyRoads3D objects in edit mode.</p>
+                  <p class="style1">After leveling is finished the following properties will appear in the Inspector Panel:</p>
+                  <p class="style2">ROAD GEOMETRY PROPERTIES<a name="road" id="road"></a> </p>
+                  <p class="style1"><strong>Render:</strong> When this property is toggled on, terrain matching road geometry will be created. </p>
+                  <p class="style1"><strong>Material <span class="style2">(Full version &amp; Pro only)</span>:</strong> This will display the current road texture. Click on the texture to open the Road Texture Window. This will display all available road textures in the folder: /Assets/EasyRoads3D/Textures/Road Textures. You can add your own textures in this folder if you like to use this system. Below each texture you will see the supported shaders for this texture. Currently supported shaders are: Diffuse, Bumped Diffuse and Bumped Specular. The name convention is: texturename_d for the diffuse texture and texturename_b for the bumped texture. When the window opens, the above mentioned folder will be scanned and matching materials will be added to the dropdown box accordingly. Select the shader type and then click the road texture to assign it to the road material.</p>
+                  <p class="style1">The folder /Assets/EasyRoads3D/Shaders/ contains 6 different depth offset shaders to make sure the road is rendered on top of the terrain. When using a low Field of View on the camera you may still encounter some z-fighting. In this case open the respective shader and tweak the two Offset factor and unit parameters (just below LOD) further downwards.</p>
+                  <p class="style1"><strong>NOTE:</strong> Currently all road objects in a project use the same material. Changing the material on one of them will change the material on all other road objects. In the next release this will be handled per road object individually. Meanwhile you can manually add  materials if you like to use different materials per road.</p>
+                  <p class="style1"><strong>Road Segments <span class="style2"> (Full version &amp; Pro only)</span>:<a name="roadsegments"></a></strong> The number of segments over the width of the road. When this number is larger then 1 you will see the following new properties:</p>
+                  <ul>
+                    <li><strong>Bumpyness:</strong> the height of the bumpyness</li>
+                    <li><strong>Bumpyness Offset:</strong> this controls the variation over the width of the road</li>
+                    <li><strong>Bumpyness Density:</strong> this controls the Variation over the length of the road</li>
+                  </ul>
+                  <p><span class="style2">Resolution. </span>This represents the geometry resolution of the road.</p>
+                  <p class="style1"><strong>UVMapping.</strong> This allows you to control the texture mapping on the road.</p>
+                  <p class="style1"><strong>Raise (cm).</strong>Represents how much the geometry is positioned above the terrain. On relatively flat surface 2 cm should be fine. Below 2 cm some terrain adjusting is necessary using the unity terrain tools at specific spots.</p>
+                  <p class="style1"><span class="style8">Calculate Tangents <span class="style2"> (Full version &amp; Pro only)</span>. </span>This will calculate the mesh tangents which is required if you use a bumped shader on the road mesh. This button is disabled when &quot;Tangents&quot; in <a href="#settings" class="link">General Settings</a> is enabled.</p>
+                  <p class="style1"><span class="style8">Save Geometry <span class="style2"> (Full version &amp; Pro only)</span>. </span>This will create a .obj file of the road geometry with the name of the road object  saved in the folder project/EasyRoads3D/[roadname]/.</p>
+                  <p class="style1"><span class="style8">Finalize Object <span class="style2"> (Full version &amp; Pro only)</span>. </span>This process does the same as &quot;Build EasyRoads3D Objects&quot; from the main EasyRoads3D Menu but only for this road object. It will unlink the road mesh from the EasyRoads3D object, rename it to the same name as the EasyRoads3D object and destroy the EasyRoads3D editor object. Note that after this process the road cannot be edited anymore. However you could try reloading the scene, the full road object should this be there unless you save the scene after this process.</p>
+                  <p class="style1"><strong>NOTE:</strong> When exporting the terrain the geometry  will match the position of the resolution slider! </p>
+                  <p><strong>NOTE:</strong> The road object created by EasyRoads3D includes uv2 coordinates matching the terrain boundaries. This will allow you to use the terrain lightmap on the road. Simply choose a lightmapped shader for the road material and drag the terrain lightmap in the lightmap slot of this shader.</p>
+                  <p>&nbsp;</p>
+                  <p class="style2">TERRAIN SPLATMAP HANDLING  <a name="splatexp" id="splatexp"></a></p>
+                  <p class="style1">EasyRoads3D can embed the shape of the road in the terrain splatmap. </p>
+                  <p class="style1"><strong>Apply Splatmap.</strong> When toggled on the road shape will be included in the terrain splatmap. You will have access to a number of splatmap properties.</p>
+                  <p class="style1"><strong>Terrain texture.</strong> Select the terrain texture you  like to use for the road shape. The splatmap features support terrains with up to 8 textures (2 splatmaps).  </p>
+                  <p class="style1"><span class="style2">Expand Width:</span> This will make the road shape wider. The actual sizes depends on the Control Texture Resolution of your terrain.</p>
+                  <p class="style1"><strong>Smooth Level.</strong> This will smoothen the edges of the road splatmap slightly. Better results can be achieved in your paint program especially when you use a resolution of 512 or lower. The smoothing algorithm will be improved in next updates. You can find the raw road splatmap in the folder: project folder &gt; EasyRoads3D &gt; [road name] &gt; roadSplatMap.png. You may edit it in your paint program and <a href="#restoresplatmap" class="link">merge it with the terrain splatmaps</a>.</p>
+                  <p class="style1"><strong>Offset x/ Offset y.</strong> Especially when the Control Texture Resolution is low compared to the size of the terrain the road shape on the splatmap can be slightly out of position compared to the road geometry. Changing the Offset parameters may give better results. Alternatively and recommended, reposition markers to better match the terrain splatmap resolution or increase the Control Texture Resolution of the terrain. </p>
+                  <p class="style1"><strong>Opacity.</strong> Controls the blend level of the road splatmap with the rest of the terrain.</p>
+                  <p class="style1"><strong>Apply Changes.</strong> Click this button to apply changes made to above settings. </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:<span class="style2"><a name="splatmapedit" id="splatmapedit"></a></span></span></td>
+                      <td>EasyRoads3D supports custom road splatmaps based on the raw shape of the road. You can find the texture with the raw road shape in the folder: project folder &gt; EasyRoads3D &gt; [road name] &gt; roadSplatMap.png. You can modify it in your painting program, make it smoother, add detail, etc. Afterwards you can apply it to the terrain splatmap by running <a href="#restoresplatmap" class="link">Restore Terrain Splatmaps</a> form the main EasyRoads3D menu and choose <strong>Yes</strong> when asked if you would like to merge the terrain splatmap with a road splatmap. You can then select the modified road splatmap in the file dialog that will appear.</td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><span class="style2">SMOOTH EDGES</span></p>
+                  <p><span class="style1">This will smoothen the terrain near the indent edges to the left and right over the distance set in</span><span class="style8"> Distance (m). </span><span class="style1">Click the &quot;Smooth Edges&quot; button to apply the smoothing.</span></p>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><span class="style2">SMOOTH SURROUNDING</span></p>
+                  <p>This will smoothen the terrain near the surrounding edges to the left and right over the distance set in<span class="style8"> Distance (m). </span>Click the &quot;Smooth Surrounding&quot; button to apply the smoothing.</p>
+                  <p><strong>SIDE OBJECT SETTINGS</strong> <span class="style2"> (Full version &amp; Pro only)</span></p>
+                  <p>When this road object has active side objects you will see a button &quot;Built Side Objects&quot;. Click this button to create / remove the side objects.</p>
+                  <p class="style1"><strong>Note:</strong> Click the &quot;Terrain&quot; tab once again (or any other toolbar tab)  to switch back to edit mode.</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="45" valign="top"><strong>Note:</strong></td>
+                      <td>The quality/detail of the shape of the road in the splatmap depends on the Control Texture Resolution and the size of the terrain. Increase the Control Texture Resolution for better results. Or edit the splatmap in your paint program. </td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>CAM FLY OVER</strong> <strong>(Full version &amp; Pro only)</strong></p>
+                  <p class="style1">The cam fly over is very useful to quickly explore the roads directly in scene view. </p>
+                  <p class="style1"><strong>Position: </strong>with the position slider you can control the cam position from the start to the end of the road.</p>
+                  <p class="style1"><strong>Height:</strong> Use this to control the height of the cam above the road.</p>
+                  <p class="style1">&nbsp;</p>
+                  <hr noshade style="height:1px">
+                  <p class="style1">&nbsp;</p>
+                  <p class="style2">GENERAL SETTINGS <a name="settings" id="settings"></a></p>
+                  <p class="style1">- The general road settings are displayed in this toolbar item </p>
+                  <ol>
+                    <li class="style1"><strong>Display Object.</strong> This will toggle the road surface on/off.</li>
+                    <li class="style1"><strong>Surface Material.</strong> This will let you select the surface material for the road surfaces. You can choose between the standard &quot;Diffuse&quot; and &quot;Transparent&quot; shader. The advantage of the standard &quot;Diffuse&quot; shader is that the road and surface geometry is clearly visible on top of the terrain in hilly areas. The advantage of the &quot;Transparent&quot; shader is that you can control the opacity of the road surfaces with the &quot;Surface Opacity&quot; slider that will appear when this option is selected. This will make it easy to accurately draw road shapes when using a road map overlay texture as the terrain texture. The roads on the map will be clearly visible through the road surfaces.</li>
+                    <li class="style1"><strong>Surface Opacity.</strong> This controls the transparency of the road surfaces and is especially useful when you use map overlays. Simply lower the opacity level so roads ont the map are clearly visible. This will make it easier to position the road markers.</li>
+                    <li class="style1"><strong>Multiple Terrain.</strong> Toggle this On if you have multiple terrains in your scene.</li>
+                    <li class="style1"><strong>Restore.</strong> This option will be enabled when the previous setting, Multiple Terrains, is toggled on. &quot;Restore&quot; refers to the process of restoring the terrain data to its original state before building the road and deforming the terrain. Keep this toggled on until you are finished with the road. Then toggle it Off. The terrain will not be restored to its original state. This setting will allow you to build all terrains one by one once you are finished with the road(s). </li>
+                    <li class="style1"><strong>Backup Location.</strong> By default EasyRoads3D stores backup data of the terrains in the folder [your project]/EasyRoads3D. In the same folder you will find road object specific data such as exported road geometry and road splatmap files. The EasyRoads3D folder is located outside the assets folder to avoid unnecessary file imports by the Unity importer. However, if you use the Unity asset server you will most likely need these files to rebuild the terrain after projects have been saved with EasyRoads3D objects in &quot;Build&quot; mode. You probably also like to synchronize manual terrain backups after manual changes to the terrain. In this case, chose &quot;Inside Assets Folder&quot; from the drop down list. Also make sure to hit ctrl-R before you commit changes to the Asset server!</li>
+                    <li class="style1"><span class="style8">Enable Debugging. </span>Check this when you are experiencing issues when using EasyRoads3D. It will write debug info to the console which will help us to solve problems. </li>
+                    <li class="style1"><strong>Road width.</strong> This is the width used for road geometry. </li>
+                    <li class="style1"><strong>Road indent.</strong> The part outside the road that will have the same height level as the road. The value of this parameter will always be bigger then the distance between 2 terrain points to avoid the terrain popping through the road geometry, <a href="#indents" class="link">more info</a>.</li>
+                    <li class="style1"><strong>Raise markers (cm).</strong> When adding a road marker the y position of the marker will match the y position of the terrain at the specific point. This property will automatically raise or lower the marker position according the entered value. This is a simple but effective feature to add focus and detail to the road and near surrounding. Set it before adding markers! </li>
+                    <li class="style1"><strong>Force Y position.<a name="forceY"></a></strong>This is a useful feature when creating shapes with consistent y position changes, like rivers. When checked you will be able to assign a value. This value represents the y change per meter. When you add markers, the new marker will inherit the y position of the previous marker + this value * the distance between the markers.</li>
+                    <li class="style1"> <strong>Surrounding.</strong> Distance between the road and the terrain used for smooth transitions</li>
+                    <li class="style1"><strong>Closed Track</strong>. This will stitch  the start and end of the road together  and is useful for creating race tracks.</li>
+                    <li class="style1"><strong>iOS Platform.</strong> This will optimize the road mesh UVs for the iOS platform and prevent common texture distortion issues on this platform caused by repetetive UVs.</li>
+                    <li class="style1"><strong>Geometry Resolution.</strong> This controls the geometry resolution of the road surfaces. 1 represents the highest resolution towards 5 representing the lowest resolution level. It is recommended to use the lowest level (5)  while creating the road as it will improve performance although it may lead to<a href="#indents" class="link"> less accurate</a> results. Just make sure to set it at level 1 when testing the terrain leveling. Level 1 will always automatically be used when building the terrain and road geometry.<strong><a name="activeTerrain" id="activeTerrain"></a></strong></li>
+                    <li class="style1"><strong>Tangents.</strong> This will automatically calculate mesh tangent data after clicking the middle tab which also generates the final road mesh. Mesh tangent data is required if you use a bumped shader on your road.</li>
+                    <li class="style1"><strong>Active Terrain.</strong> This setting allows you to set the currently active terrain in the case you have more then one terrain object in your scene. When processing the terrain and road (middle tab) the selected terrain will be affected. Alternatibely you can use Ctrl+Alt+Click this will automatcially set the clicked terrain as the selected terrain in the  dropdown.</li>
+                    <li class="style1"><strong>Update Vegetation.</strong> When toggled on all tree and detail objects near the road will be removed. For both tree objects and detail objects individually you can specify the distance to the road within these objects will be removed <strong><span class="style2">(Full version &amp; Pro only)</span></strong>. Depending on the number of tree and especially detail objects in the scene this process can take up some time. You may choose too disable this feature during testing the road and terrain leveling to speed up rendering the terrain.</li>
+                    <li><strong>Active Side Objects <span class="style2"> (Full version &amp; Pro only)</span>.</strong> Here all available side objects will be listed. You can toggle on / off side objects for this particular EasyRoads3D object. This will make it much easier to control your scene and manage side object settings per marker</li>
+                  </ol>
+                  <p><strong>NOTE:</strong> Multiple terrains. Currently terrains are processed individually by selecting the active terrain (point 14 above). This minimizes processing time when working on a specific part of the road. In the next release a progressbar will be visible and the option to proces all terrains at once. The reason why this is not implemented right now is because procssing a large number of terrains at once can take some time. It will be confusing to know what is going on without a progressbar visible.</p>
+<p class="style1"><span class="style2">NOTE:</span> EasyRoads3D uses layers 29, 30 and 31. Make sure other game objects in the scene are not on one of these layers to avoid unexpected behaviour! </p>
+                  <p class="style2">Road Splatmap to Terrain Splatmap<a name="splatmap" id="splatmap"></a></p>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong>NOTE:</strong> Photoshop users, it is recommended to use &quot;Save for web...&quot; to save the png. If you save the image using &quot;Save as...&quot;, be sure to select the png format. Do not simply select the already existing file in your folder as this will probably NOT import well in Unity.</p>
+                  <p><span class="style2">NOTE: </span><span class="style3">DO NOT</span> use the splatmap features if you are using more then 8 textures on your terrain!</p>
+                  <p>&nbsp;</p>
+                  <p class="style2"><strong>Road Geometry</strong><a name="geo" id="geo"></a></p>
+                  <p class="style1">The road  geometry exported from EasyRoads3D contains  vertex info, face info and UV info. You will have to apply normal info in your modeling application. If you exported the geometry with terrain lightmap support you will see 4 corner faces. Select all road faces and corner faces and use a planar type of uvmapping on the second channel. Save or export to .fbx. In Unity make sure that the import setting for size is 1. Choose a lightmap supported shader on your road asset and drag the terrain lightmap to the shaders lightmap slot. Drag the asset to your scene go to the EasyRoads3D menu and select &quot;Position Road&quot;, browse to the EasyRoads3D terrain export file and select it. The road will be positioned correctly. </p>
+                  <p class="style1">Depending on your modeling application and/or the export settings you used to export the road, it could be that you have to rotate the object on 1 or more axis. The &quot;Position Road&quot; editor script has some commented code in it that can take care of this automatically once you figured out the correct settings for your case. Just uncomment the lines and fill in the right amounts. </p>
+                  <p class="style1"><strong>RIVER OBJECTS <span class="style2"> (Full version &amp; Pro only)</span>:</strong><a name="rivers" id="rivers"></a></p>
+                  <p class="style1">EasyRoads3D Menu &gt; New Object &gt; Object Type: River Object</p>
+                  <p class="style1">River objects essentially work similar as road objects. With the following differences. </p>
+                  <p class="style1">In Settings you will see 4 more properties:</p>
+                  <p><span class="style8">- Water Level. </span><span class="style1">The </span>minimum distance between the water surface and the surrounding. In the case the surrounding is below the water level it will be raised with this value.</p>
+                  <p><strong>- Floor Depth. </strong>This represents the depth of the river relative to the marker position. This value can be adjusted per marker.</p>
+                  <p><strong>- Material:</strong> This will display the currently available water materials in the project folder. Import the water packages if there are no materials available!</p>
+                  <p><strong>- Script:</strong> This will display the currently available water scripts in the project folder. Import the water packages if there are no scripts available!</p>
+                  <p>After Leveling the terrain and creating the river you will see also the the Material and Script options. Changing these in this mode will instantly update the river object. If you cannot see the changes, simply click in the scene view to update it.</p>
+                  <p> You now probably want to see the river animation. Please note this will output a warning regarding loss of the original terrain data stored in memory. Read about this <a href="#playscene" class="link">here</a>.                  </p>
+                  <p>&nbsp;</p>
+                  <p><strong>SIDE OBJECTS <span class="style2"> (Full version &amp; Pro only)</span>:</strong><a name="sideobjects"></a></p>
+                  <p>The Side Objects feature is a powerful tool which will significantly lower your production time. In general you can create 3 types of side objects:</p>
+                  <p>1. By instantiating game objects / prefabs.<br>
+                  2. By defining the shape of procedural geometry<br>
+                  3. A combination of these two.</p>
+                  <p>Side Objects are managed through the Side Object Manager.</p>
+                  <p><strong>Side Object Manager:</strong><a name="sideobjectmanager"></a></p>
+                  <p>Menu &gt; EasyRoads3D &gt; Side Objects &gt; Object Manager</p>
+                  <p><strong>Instantiated Side Objects:</strong></p>
+                  <p><img src="images/object_manager.jpg" width="556" height="424"></p>
+                  <ol>
+                    <li><strong>Selected Object:</strong> Use this combobox to selected and edit created side objects</li>
+                    <li><strong>Create New Object:</strong> Click this button to create a new side object.</li>
+                    <li><strong>Duplicate Object:</strong> Click this button to duplicate the selected side object. This is a useful feature to quickly create identical objects used on both the left and right side of the road</li>
+                    <li><strong>Import Objects:</strong> This will display the &quot;open file&quot; dialog, browse to the &quot;sideobjectsLog.er3dObjects&quot; typically located in /Assets/EasyRoads3D of a Unity project. All side objects in this file will be displayed in a new window, you can select side objects and click import. This will import all selected side objects into the current project. The easiest way to use this is by renaming the &quot;sideobjectsLog.er3dObjects&quot; file in the original project. Export this file including all associated side object assets like start/end objects, material etc. to a Unity package. Import this Unity package in your current project and import the renamed .er3dObjects side objects file through the Side Object Manager.</li>
+                    <li><strong>Object Name:</strong> The name of the side object</li>
+                    <li><strong>Object Type: </strong>Select the appropriate side object type from the combo. In the case of instantiated side objects choose&quot;imported Mesh Object&quot;.</li>
+                    <li><strong>Object:</strong> Drag the gameobject / prefab you want to use for this side object in the corresponding slot.</li>
+                    <li><strong>Terrain Vegetation: </strong>The combobox will show all tree prototypes currently added to the terrain object. Selecting one of the prototypes will move the associated prefab to the object slot. Once you are finished with tweaking the side object settings you can add all instantiated trees to the terrain vegetation data with all the the advantages of for example tree billboarding, etc. Do this by selecting the specific side object in the hierarchy and click the &quot;Update Terrain vegetation&quot; button in the Inspector.</li>
+                    <li><strong>Vegetation Scale:</strong> Use this min/max slider to set the minimum maximum scale boundaries for vegetation side objects. A random scale between the two will be chosen for each tree instance.</li>
+                    <li><strong>Prefab Childs:</strong> This feature is enabled when more then 1 child object exists in the prefab. So the correct way to use this feature is to setup your prefab in a way that all possible objects are childs of the parent prefab. You have 3 options: <br>
+                      - 
+                    All: this will instantiate all child objects per new instance<br>
+                    - Child sequence: this will go through all child objects according the child index and instantiate a single child object per instance<br>
+                    - Random: 
+this will randomly select a child object per instance. If you want specific objects to be instantiated more often, simply duplicate them in the prefab so there is more chance that they will be chosen.</li>
+                    <li><strong>Distance:</strong> The distance between instantiated objects.</li>
+                    <li><strong>Y-axis Rotation:</strong> This controls the rotation on the y-axis. Options are &quot;Follow Road&quot;, &quot;Fixed&quot; and &quot;Random&quot;.</li>
+                    <li><strong>Sideways Position:</strong> This defines the default position to the right or left of the center of the road. <a href="#sideObjectMarker" class="link">This position can be adjusted for each marker</a> , therefore changes to this value in the Object manager will currently not affect this side object on existing road objects as it will overwrite possible manually adjusted values per marker. </li>
+                    <li><strong>Density:</strong> a value between 0 and 1 which indicates the chance of how often the object should be instantiated relative to the distance setting. A value of 1 means always.</li>
+                    <li><strong>Maximum Offset:</strong> you can use this setting to position the objects perpendicular to the direction of the path over a random distance with a maximum of the chosen value. 0 means exactly on the path. This feature is useful for objects such as rock formations.</li>
+                    <li><strong>Align with Terrain:</strong> When checked the object will be aligned according the normal of the terrain at the objects position.</li>
+                    <li><strong>Combine Instantiated:</strong> Depending on the used materials, this will combine all instantiated objects into a single object.<br>
+                    </li>
+                  </ol>
+                  <p><strong>Procedural Objects:</strong><span class="style2"><a name="editGeo" id="geo2"></a></span></p>
+                  <p><img src="images/object_manager_clamp.jpg" width="556" height="424"></p>
+                  <p>For procedural objects choose &quot;Procedural Mesh Object&quot; as the Object Type. You will see that the properties will change:</p>
+                  <ol>
+                    <li><strong>Edit Geometry:</strong> Click this button to define the shape of the procedural object.</li>
+                    <li><strong>Start Asset / End Asset: </strong>When you disable this type object for specific markers a gap will appear at the start and end of the procedurally created geometry. This gap can be avoided by using start and end objects modeled in your modeling application. Import the objects in Unity and drag these objects to the appropriate slots. The shape of these objects can be used to define the shape of the procedurally created geometry. See important extra<a href="#sideObjectsImportant" class="link"> info below</a>.<br>
+                    </li>
+                    <li><strong>Controller: </strong>This controls the geometry structure and positioning, the options are &quot;Clamp Left&quot;, &quot;Clamp Right&quot; and &quot;Spline Controller&quot;. &quot;Clamp Left&quot; and &quot;Clamp Right&quot; will create geometry based on the resolution and vertice positions of the road geometry. &quot;Clamp Left&quot; will create the geometry at the left side of the road,  &quot;Clamp Right&quot; will create the geometry at the right side of the road. When &quot;Spline Controller&quot; is selected the geometry will be created according a new spline. New properties will appear (see the image below).<br>
+                        <br>
+                        <a name="editGeo"></a><br>
+                        <img src="images/object_manager_spline.jpg" width="556" height="424"><br>
+                      <br>
+                    </li>
+                    <li><strong>Distance Sideways: </strong>The default distance  to the right or left of the center of the road. Note that this refers to the spline position of the marker. <a href="#sideObjectMarker" class="link">This position can be adjusted for each marker</a>. When this setting is not 0 for all or some markers this side object will be positioned on its own spline shape based on the sideways distances. If you want to align side objects exactly according the road shape, use X Positioning in the <a href="#sideobjectinpector" class="link">Inspector of the specific side object</a>. When you change the default sideways distance setting you have several options to choose from: 1. Do not update exisiting EasyRoads3D objects (the changed setting will only b applied to new EasyRoads3D objects). 2. Update all markers in all EasyRoads3D objects (be careful with this option, all manually adjusted marker settings will be lost!). 3. Only update markers with the previous default Sideways Distance value applied (this option will preserve the values of manually adjusted markers)</li>
+                    <li><strong>Face Distance: </strong>The distance in forward direction between vertices. Use this to control resolution of the geometry.</li>
+                    <li><strong>Align with Terrain: </strong>Options are: 1. None, which means no rotation, 2. Terrain Normal, this will align the side object according the terrain normal at that point, 3. Follow Path, this will align the side object according the forward direction of the path, 4. Path Sideways. This will align objects exactly accordin the shape of the road.</li>
+                    <li><strong>Connection Object: </strong>Optionally you can assign a gameobject / prefab as a connection object. This object will be instantiated along the procedural shape. An example is the train lead and post geometry in the demo project.</li>
+                    <li><strong>Material: </strong>Drag the material you want to use for the procedurally created mesh to this slot. Note that the uvs of procedural objects move in Y direction. With regard to textures for objects like walls or fences you may have to rotate it 90 degrees. In a future version you will be able to control whether the uvs move in Y or X direction.</li>
+                    <li><strong>Combine procedural geometry..:</strong> This option appears for procedural side objects that have &quot;start&quot; and / or &quot;end&quot; assets applied. When toggled on the final geometry will be combined in a single mesh. Note that all objects must have the same material applied!</li>
+                    <li><strong>Weld matching vertices..:</strong> This option appears when &quot;Combine procedural geometry...&quot; is turned on. It will weld vertices at the same position, those at the attach points between the procedural geometry and &quot;start&quot; / &quot;end&quot; assets. The advantage is, the normals will look better, the disadvantage is that, depending on the original values on the &quot;start&quot; and &quot;end&quot; assets, the UVs may look wrong. In this case you may get better results when editing the geometry in a modeling application.</li>
+                  </ol>
+                  <p><strong>Update</strong> button. Click this button to automatically update the currently selected side object in the scene. This will only work if this side object is currently rendered for one of the EasyRoads3D objects in the scene.</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:<span class="style2"><a name="splatmapedit" id="splatmapedit2"></a></span></span></td>
+                      <td><p>Choosing the right rotation for your side objects. Use &quot;None&quot; for objects such as fences, walls etc. Use &quot;Terrain Normal&quot; if you like to always align the objects according the terrain normal. Use &quot;Path Normal&quot; when you have have tilting applied to markers and you would like to align the side objects accordin ghte tilting level also when the side object is not inside the path and indent area. Use &quot;Path Sideways&quot; for side objects that together with other side objects create a specific object or shape, like bridges or train rails. This setting makes sure the alignment of all objects is exactly the same.</p>
+                      <p>&nbsp;</p></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                  <p><strong>IMPORTANT!</strong> </p>
+                  <p>Start Asset / End Asset Setup:<a name="sideObjectsImportant"></a></p>
+                  <p>As explained above you can use start and end gameobjects / prefabs to close gaps on procedurally created geometry. It is important that these objects are correctly rotated. Depending on the modeling application you use, gameobjects may be rotated and point in the wrong direction after being imported. Always make sure that they point in the correct direction. You can check this by selecting the object with the mesh renderer attached in the project view and have a close look at the preview pane. </p>
+                  <p>Look at the images below. On the left you see the imported geometry of the &quot;left end of the wall&quot; object in the road demo. The intention is to snap this object to the end of the wall with the open gap. However the closed area is pointing towards us, this is the wrong direction. The importer rotated the object by 180 degrees on the y-axis. The solution here is to create a prefab and use the gameobject with the mesh renderer attached as a child of the prefab. It is very important that the mesh renderer is a component of the child of the prefab and not the parent object. Make sure that the relative position of this child object is Vector3(0,0,0) and, in this case, rotate the child object 180 degrees on the y-axis in the Inspector. You can see the result on the right. Now the gameobject is pointing in the correct direction. Have a look at the demo project. Depending on your modeling application and export settings within the modeling application you may have to rotate the child on the x-axis or z-axis too. If this is the case, just experiment with rotation values until the object looks correct in the preview pane. </p>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>Wrong!<br>
+                        <br>
+                      <img src="images/startEndWrong.jpg" width="400" height="254"></td>
+                      <td>Correct!<br>
+                        <br>
+                      <img src="images/startEndOK.jpg" width="400" height="254"></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+<p><strong>Procedural Object Editor Window:</strong></p>
+                  <p>For procedural objects you can define the shape of the object in the Procedural Object Editor Window. This window will open when you click the button <a href="#editGeo" class="link">&quot;Edit Geometry&quot;</a> on the right of the Object Type combo box. This button will become visible when &quot;Procedural Mesh Object&quot; is selected.</p>
+                  <p><img src="images/EditorWindow.jpg" width="811" height="492"></p>
+                  <p>The editor window gives a 2D representation of the shape of the procedural geometry. You can define any shape you want:</p>
+                  <ol>
+                    <li>Add new vertice positions by double clicking on the stage there where you want to position the new point. Points will be connected to give a clear idea of the shape. </li>
+                    <li>Move points by selecting them (the point turns red) and dragging it while keeping the mouse down. </li>
+                    <li>Delete points with the &quot;Backspace&quot; or &quot;Delete&quot; key.</li>
+                  </ol>
+                  <p> Controls / Hot Keys:</p>
+                  <ul>
+                    <li>[Shift] click: Select and drag or delete multiple points</li>
+                    <li>[Control] double click: Insert a point between the two closest points</li>
+                    <li>Z key: Zooms the grid so all the points are clearly visible</li>
+                    <li>R key: Resets the zoom and positioning to the original values</li>
+                    <li>Mouse down:  and drag, will move the grid</li>
+                    <li>[alt] drag stage on Y-axis, Mouse scroll, [Command] &amp; drag, right mouse button &amp; drag: Zooms in / out on the grid.</li>
+                  </ul>
+                  <p>&nbsp;</p>
+                  <p>Side Object Geometry Controls:</p>
+                  <ol>
+                    <li><strong>Selected Index:</strong> When you select a point the associated index value will be displayed in the ComboBox. The purpose of this is become explained in the NOTE here below.</li>
+                    <li><strong>Close Geometry:</strong> When checked, the first and last point will connect.</li>
+                    <li><strong>Trace Object: </strong>if you added a Start or / and End object to the associated slots in the <a href="#editGeo" class="link">Object Manager</a> this object will appear here. It can be used to analyze the geometry and automatically define the shape of the procedural geometry accordingly. Make sure that those vertices used to connect the start and end assets with the procedural with each other are at position 0 on, depending on your modeling application, the y-axis or z-axis.</li>
+                    <li><strong>Trace On:</strong> Depending on the rotation of the asset you may have to switch between x-axis, y-axis and z-axis until you clearly see the shape that the procedural geometry should have. By default objects are traced on the z-axis when opening the editor window and no points are stored yet for this side object.</li>
+                    <li><strong>Auto Connect:</strong> Below the situation is described where you can clearly see that the dots  are positioned correctly but they do not connect in the right order. Auto Connect will be enabled when you select the first point, from this it will connect all points according the closest neighbor. Depending on the geometry structure it may simplify reordering of point indexes.</li>
+                    <li><strong>Mirror Horizontally: </strong>This mirrors the shape horizontally and is useful when correcting the shape of a duplicated side object or when it turns out that tracing the geometry of the start or end asset results in a flipped shape. </li>
+                    <li><strong>Mirror Vertically: </strong>This mirrors the shape vertically.</li>
+                    <li><strong>Flip Faces: </strong>It may happen that the normals point in the wrong direction, you will notice this when rendering the side object. This button will flip the faces so it will appear correctly. This feature is also available in the <a href="#sideobjectinpector" class="link">Side Object Inspector</a>.<br>
+                    </li>
+                  </ol>
+                  <p><strong>Update</strong> button. Click this button to automatically update the currently selected side object in the scene. This will only work if this side object is currently rendered for one of the EasyRoads3D objects in the scene.</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td width="35" valign="top"><span class="style6">Tip:</span></td>
+                      <td><p>Use [shift] click to select and move or delete multiple side objects</p></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                  <p><strong>NOTE: </strong>If you use the geometry trace feature it may happen that you clearly see the correct shape  but the points do not connect to each other in the right order. This is due to the vertice order in the mesh. You can correct this by changing the index of points. Start at one of the two points that should have only one connection. If the index is not 0 you can either set it to 0 by selecting 0 from the combobox at the top left. But preferably first check the other point that should only have one connection. If this point is set to index 0, start here. Now select the next point to which this point should connect. If it already connects, the index will be 1. If not, then select index 1 in the combobox for this point. Repeat this procedure until all points are correctly connected.                  </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                      <td>Points are NOT connected in the right order!<br>
+                          <br>
+                          <img src="images/vertices_wrong.jpg" width="379" height="202"></td>
+                      <td>Points are connected in the right order!<br>
+                          <br>
+                          <img src="images/vertices_correct.jpg" width="379" height="202"></td>
+                    </tr>
+                  </table>
+                  <!--
+                  <p>Depending on the geometry structure it could also happen that multiple vertices are returned which all represent a single point. This is the case when a single point is connected to 3 or more other points.If this happens, you simply click on the point and delete it untill it is only connected to 1 or 2 other points. If you want to be sure that indeed a point is covered by 2 vertices, you can select it and drag it. As it should only drag one point, the other point will now become visible at the same spot. If not, then this is a single point and you should not remove it. You can also clearly check if the number of points is correct by selecting one point and look at the top right in the combobox at the number of items. If this number is bigger then the visible number of points on the stage, you know there are duplicates!</p>
+                  <p>Below you see an image sequence. At the left, note the points with a red circle, they are connected with more then 2 other points. In the next image fore each point one of the duplicates has been slightly moved. Now you can also see that actually the middle point  has duplicates too! In the third image we have removed all duplicated points. It looks like a mess, but we can clearly see the shape we need by looking at the position of all the remaining points. In the last image on the right we have reindexed each point so they are now all connected in the right order.</p>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><p>&nbsp;</p>
+                      <p><img src="images/vertices_seq_1.jpg" width="220" height="141"></p></td>
+                      <td><p>&nbsp;</p>
+                      <p><img src="images/vertices_seq_2.jpg" width="220" height="141"></p></td>
+                      <td><p>&nbsp;</p>
+                      <p><img src="images/vertices_seq_3.jpg" width="220" height="141"></p></td>
+                      <td><p>&nbsp;</p>
+                      <p><img src="images/vertices_seq_4.jpg" width="220" height="141"></p></td>
+                    </tr>
+                  </table>//-->
+                  <p>&nbsp;</p>
+<p class="style8">Managing Side Objects in your scene</p>
+                  <p class="style1">Select an EasyRoads3D object in the scene and make sure the General Settings tab is selected <img src="images/general_settings.jpg" width="200" height="22">.</p>
+                  <p class="style1">At the bottom you will see a list with all available side objects in this project. You can activate / deactivate side objects per scene. For example in the demo, the train track side objects are not used in the road scene so we uncheck all side objects related to the train track. This same list is also available after your build the side objects. If you toggle / off side objects the scene will update and you will instantly see how the changes affect the scene.</p>
+                  <p class="style8">Building the Side Objects</p>
+                  <p class="style1">To built the side objects of an EasyRoads3d object , first render the road and terrain by clicking the middle tab, <img src="images/render_tab.jpg" width="200" height="22">.</p>
+                  <p class="style1">At the bottom you will see &quot;Side Objects Settings&quot;. Click the button &quot;Built Side Objects&quot;. Now all active side objects will be built and you will see a new button &quot;Save Side Object Geometry&quot;. This will create .obj files of each individual side object. Find the files in: </p>
+                  <p class="style1">your unity project/EasyRoads3D/road object name/</p>
+                  <p class="style8">Controlling Side Objects per Marker<a name="sideobjectsMarker" id="sideobjectsMarker"></a></p>
+                  <p>After building the side objects you will also see that the Marker Objects will become visible.
+                  This allows you to easily select a marker. Instead of the <a href="#properties" class="link">default marker properties</a>, 
+                  You will now see a combobox with all active side objects and below the properties of the currently selected side object:</p>
+                  <ul>
+                    <li><strong class="style1">Selected Object:</strong> this is a dropdown box with all  side objects listed that are active for this object. Select the side object that you want to edit from the list.</li>
+                    <li><strong class="style1">Display Object:</strong> Toggle this on/off when you want to render the selected side object for the selected marker.</li>
+                    <li><strong class="style1">Spline Node:</strong> Toggle this respectively on/off when you want to use this marker for the spline shape. The road scene in the demo project uses this feature for the &quot;Right Fence&quot; in the sharp corner. It cuts of a large part of the road shape. This allows you to create shapes that run independently from the actual road shape.</li>
+                    <li><strong class="style1">Distance Sideways:</strong> This allows you to move the spline path for the selected side object away from the road shape. </li>
+                  </ul>
+                  <p>&nbsp;</p>
+<p class="style8">Tweaking Side Object Properties<a name="sideobjectinpector"></a></p>
+                  <p class="style1">At this stage you might notice for example that the normals of a side object point in the wrong direction. You can correct this by going back to edit mode and opening the <a href="#sideobjectmanager" class="link">Side Object Manager</a>, but you can also tweak side object properties by selecting them in the scene or in the hierarchy (RoadObject Asset&gt; Side Objects &gt; ...). </p>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="285" valign="top"><img src="images/sideObjectInspector.jpg" width="260" height="390"></td>
+                      <td width="300" valign="top"><img src="images/sideObjectInspector2.jpg" width="260" height="390"></td>
+                      <td valign="top"><p class="style1">Depending on the type of side object you will see a number of properties you can control in the Inspector. Any changes you make here are stored permanently in the side object data.</p>
+                      <p class="style1">This makes it very easy to quickly flip normals, experiment between the alignment options, manage UV tiling, etc.</p></td>
+                    </tr>
+                  </table>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><span class="style8">PROCEDURAL MESH OBJECT <span class="style2"> (Full version &amp; Pro only)</span></span><span class="style2"><a name="customObjects" id="notes2"></a></span></p>
+                  <p class="style1">EasyRoads3D Menu &gt; New Object &gt; Object Type: Procedural Mesh Object</p>
+                  <p class="style1">The Procedural Mesh Object is based on the <a href="#sideobjects" class="link">side objects</a> feature. You can associate one or more of the side objects to this object type. The main difference with the road and river object is that this object type will not alter the terrain heights. It is the ideal tool to instantiate objects according a path or create procedural geometry according a path. It can be used to create for example individual fences, walls, hedges, pipelines, rock formations etc.</p>
+                  <p class="style1"><strong> Procedural Mesh Object inspector functionality differences compared to the road and river object:</strong></p>
+                  <p class="style1">When a marker is selected you will see the markers side object properties (for road and river objects, you will only see these properties after you leveled the terrain and build the side objects). The middle &quot;Process Terrain&quot; tab will not alter the terrain heights. Use it to show / hide the markers.                  </p>
+                  <p class="style1"><strong>New properties:</strong></p>
+                  <p class="style1"><strong>General Settings &gt; Snap to terrain:</strong> This property is checked by default. Uncheck it if you want to have the side object follow the spline shape exactly according the marker positions. In other words, if you do not want the side object to snap to the terrain.</p>
+                  <p class="style1"><strong>Markers &gt; Sharp Corner:</strong> This is a very useful property for objects such as fences, hedges. When checked the shape will not have a rounded corner based on the spline path at this marker position, instead the corner will be sharp. </p>
+                  <p class="style1"><strong>NOTE:</strong>You may have to move the marker slightly for a perfect sharp corner in order to have the the number of instances exactly fit for a sharp corner.</p>
+                  <p class="style1">&nbsp;</p>
+                  <hr noshade style="height:1px">
+                  <p class="style8">USEFUL NOTES<span class="style2"><a name="notes" id="notes"></a></span> </p>
+                  <p class="style1">- adding / inserting markers is done by activating the respective toolbar tab, holding the [shift] key and click.<br>
+                    - you can select a road surface directly by clicking on the surface.<br>
+                    - [shift] select surfaces to change the position of multiple surfaces, (the individual surface properties will not be visible) <br>
+                  - [shift] move gizmo will only change the surface position, when releasing shift the surface geometry will be updated (this is useful in case of performance issues). <br>
+                  <br>
+                  </p>
+                  <hr noshade style="height:1px">
+                  <p class="style1"><strong>ERROR MESSAGES:</strong><span class="style2"><a name="errors" id="todo2"></a></span></p>
+                  <p class="style1"><em>MissingComponentException: There is no 'Renderer' attached to the &quot;road&quot; game object, but a script is trying to access it.<br>
+                  You probably need to add a Renderer to the game object &quot;road&quot;. Or your script needs to check if the component is attached before using it.</em></p>
+                  <p class="style1">This message may appear when clicking the middle tab &quot;Level Terrain&quot; and appears when previous render data has been lost due to for example playing the scene or saving a script while the terrain object was in render mode. For now, to solve this problem, optionally save the scene, create a new scene and reopen the previous scene, this will refresh the terrain object.</p>
+                  <p class="style1"><em>Mesh.vertices is too large. A mesh may not have more than 65000 vertices.</em></p>
+                  <p class="style1">This error may occur when rendering side objects. If the side object is an instantiated object, make sure you uncheck &quot;Combine instantiated objects&quot;. Instead, divide the instantiated objects in groups by parenting them to an empty game object and apply the Unity combine script.</p>
+                  <p class="style1">&nbsp; </p>
+                  <hr noshade style="height:1px">
+                  <p class="style1"><strong>TROUBLESHOOTING:</strong><span class="style2"><a name="trouble" id="todo3"></a></span></p>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong><em>The road object is visible in Game View but not in Scene View</em></strong></p>
+                  <p class="style1">EasyRoads3D uses layers 30 and 31. These layers must be active in the layers dropdown at the right top of the Unity Editor. If these layers are not named and your Unity Editor is set to use custom layer, layers 30 and 31 will be disabled and therefore the road will not be visible in scene view. Selecting &quot;Everything&quot; however will NOT activate Layers 30 and 31 in this case! The fix, with the EasyRoads3D object selected, In the Inspector select &quot;Add Layer&quot; at the bottom of the Layers dropdown and give layer 30 and 31 a name like EasyRoads3D30 and EasyRoads3D31. These layers will now become visible in the other layers dropdown. Make sure they are active.                  </p>
+                  <p class="style1"><strong><em>Mismatched serialization in the builtin class 'Mesh'. (Read 10380 bytes but expected 10381 bytes)</em></strong></p>
+                  <p class="style1">This error can appear immediately after importing the package in Unity 4.3. It is harmless. Further info <a href="http://forum.unity3d.com/threads/210417-project-4-2-to-4-3-Mismatched-serialization-in-the-builtin-class-Mesh" class="link">http://forum.unity3d.com/threads/210417-project-4-2-to-4-3-Mismatched-serialization-in-the-builtin-class-Mesh</a></p>
+                  <p class="style1"><strong><em>Markers do not connect<br>
+                  </em></strong><br>
+                    - Did you restart Unity after registering EasyRoads3D?
+                    <br>
+                    - Check if markers are very close to each other. If so, remove one of them or make the distance bigger.<br>
+                    - if this doesn't help, clear the debug log, enable debugging in &quot;General Settings&quot;
+                  in the Inspector and select a marker. This will write debug info to the console. Please send the debug log file to trberg@andasoft.com                  </p>
+                  <p class="style1"><strong><em>The road disappears below the terrain</em></strong></p>
+                  <p class="style1">This will happen when road vertices are below the terrains Y position because technically it is impossible to set terrain heights below its Y position. The road will be below the terrain in these areas. So make sure all markers are at least positioned at the terrains Y position. Also avoid big height differences between markers at the terrains Y position and the next marker. The road will first slightly move downwards to below the terrains Y position. To fix this situation, move the marker at the terrain Y position slightly upwards. </p>
+                  <p class="style1">The road can also disappear below the terrain on terrains with a larger heightmap scale and considerable height differences in the road. There are simply not enough terrain points to accurately deform the terrain. You can see this when turning on Wireframe or Tex-Wire for scene view and zoom in to the critical area. You will clearly see the terrain points. To solve these situations, avoid big short height differences in the road or use an higher heightmap resolution on your terrain.</p>
+<p class="style1"><strong><em>Side Objects do not appear</em></strong></p>
+<p class="style1">This happens when you have chosen to disable this side object by default for each marker. To check this, select a marker, in the inspector select the specific side object from the Selected Object combobox and have a look at the Display Object property. Is it checked?</p>
+<p><em><strong>Wrong Rotation Prefabs used in side objects</strong></em></p>
+<p>Prefabs may appear in the scene with the wrong rotation. This is directly related to the mesh data of your prefab.</p>
+<p>First, EasyRoads3D instantiates side objects according the direction of the spline path in the Z direction. So if you want to Instantiate a fence mesh along the track, the fence model must be modelled in the direction of the Z axis, not the X axis.</p>
+<p>The second thing to check is how Unity displays the prefab and if that is the correct orientation. If it is the correct orientation, check the rotation values in the Inspector. Did Unity automatically apply rotation values to the prefab or are the rotation values (0, 0, 0)? If Unity did apply rotation values, these rotation values are ignored in EasyRoads3D.</p>
+<p>You can  do two things to solve this. First you could change the rotation of the model in your  modeling app. Second, you can create an empty prefab, position it a (0, 0, 0),  add your real model as a child to this prefab at (0, 0, 0) and apply the same  rotation values as Unity does to this child object. Attach this new prefab to  the side object, the orientation should now be correct.</p>
+<p class="style1">&nbsp;</p>
+                  <p class="style1"><strong><em>Side Objects: Error: Mesh.vertices is too large. A mesh may not have more than 65000 vertices.</em></strong><em></em></p>
+                  <p class="style1">This error may occur when building side objects. If the side object is an instantiated object, make sure you uncheck &quot;Combine instantiated objects&quot;. Instead, divide the instantiated objects in groups by parenting them to an empty game object and apply the Unity combine script to each group.</p>
+                  <p class="style1"><strong><em>The generated river mesh breaks through the terrain:</em></strong></p>
+                  <p class="style1">This most likely due to the terrain heightmap resolution / terrain size settings. Increasing the &quot;River Bank Height&quot; setting in General Settings should solve this.                  </p>
+                  <p class="style1">&nbsp;</p>
+                  <p class="style1"><strong><em>Errors when swapping river materials / scripts</em></strong></p>
+<p class="style1">The materials and scripts available in the comboboxes are the currently available assets in the project referring to the water assets in the Standard and Pro Standard Assets folders. If you get error messages when swapping them it means the combination of the selected Material and selected script will not work. This usually happens when using either a Watr3 material or script on one of the older materials or scripts. This is taken care of in the scripts by automatically updating the material or script. However it may still raise an error. This is on the list to fix.</p>
+<p class="style1">&nbsp;</p>
+<p class="style1"><strong><em>I cannot add a new EasyRoads3D object</em></strong></p>
+                  <p class="style1">Do you get error messages in your project also unrelated to EasyRoads3D? Make sure Unity comples the project without red error messages. To ensure the problem is not related to EasyRoads3D you could test it in a new fresh empty project. Please contact us if creating a new object still fails.<br>
+                  </p>
+                  <p class="style1">&nbsp;</p>
+                  <hr noshade style="height:1px">
+                  <p class="style1"><strong>KNOWN ISSUES</strong> <span class="style2"><a name="todo" id="todo"></a></span></p>
+                  <p>&nbsp;</p>
+<p><strong>Terrain Toolbar Tab. </strong>When  a road marker segment is selected, sometime you may have to click the tab twice to start leveling the terrain . </p>
+                  <p><strong>Road Splatmap:</strong> On bigger terrains with a low heightmap resolution it may happen that some parts of the generated road splatmap are missing. <a href="#splatmapedit"  class="link">Edit the road splatmap</a> and re import using <a href="#restoresplatmap" class="link">Restore Terrain Splatmaps</a>.                  </p>
+                  <p>&nbsp;</p>
+                <p class="style9">Have fun and do not hesitate to contact me if you experience issues or if you have questions! <a href="mailto:trberg@andasoft.com" class="link">Email</a></p></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+      </table>
+	</center>
+	</body>
+	
+</html>
+

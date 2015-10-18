@@ -1,0 +1,103 @@
+fileFormatVersion: 2
+guid: 1ab11afba3a152e408b962b22d767ea4
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cylinder008
+    100002: Object1068
+    100004: Object1069
+    100006: ref_ground
+    100008: //RootNode
+    100010: ship_wreck_nose_hull
+    100012: ship_wreck_nose_ribs
+    100014: ship_wreck_nose_spine
+    400000: Cylinder008
+    400002: Object1068
+    400004: Object1069
+    400006: ref_ground
+    400008: //RootNode
+    400010: ship_wreck_nose_hull
+    400012: ship_wreck_nose_ribs
+    400014: ship_wreck_nose_spine
+    2300000: Cylinder008
+    2300002: Object1068
+    2300004: Object1069
+    2300006: ref_ground
+    2300008: ship_wreck_nose_hull
+    2300010: ship_wreck_nose_ribs
+    2300012: ship_wreck_nose_spine
+    2300014: //RootNode
+    3300000: Cylinder008
+    3300002: Object1068
+    3300004: Object1069
+    3300006: ref_ground
+    3300008: ship_wreck_nose_hull
+    3300010: ship_wreck_nose_ribs
+    3300012: ship_wreck_nose_spine
+    3300014: //RootNode
+    4300000: Cylinder008
+    4300002: Object1068
+    4300004: Object1069
+    4300006: ship_wreck_nose_spine
+    4300008: ship_wreck_nose_hull
+    4300010: ship_wreck_nose_ribs
+    4300012: ref_ground
+    4300014: Ship_wreck_nose
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    pivotNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 

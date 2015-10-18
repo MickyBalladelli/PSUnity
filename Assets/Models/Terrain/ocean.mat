@@ -1,0 +1,369 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ocean
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _LIGHTMAPPING_REALTIME _NORMALMAP _UVSEC_UV1
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 30, y: 30}
+          m_Offset: {x: .0599999987, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 61ce8e289a6c21247b794401b83b77fa, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: dbf91a18577ff3d45a5c47e5dcb15082, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 30, y: 30}
+          m_Offset: {x: .0599999987, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 30, y: 70}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionTempRamp
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BaseMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BaseAlbedoGloss
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: -.0399999991}
+      data:
+        first:
+          name: _BaseNormal
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BaseOcclusionHeightmap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailBlendMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 1543bc44e2c376743ae7588502740d4c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoGloss0
+        second:
+          m_Texture: {fileID: 2800000, guid: ef527fb4ea0beac408c93a00b32fbcf1, type: 3}
+          m_Scale: {x: 10, y: 30}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormal0
+        second:
+          m_Texture: {fileID: 2800000, guid: 8d0a4fea052384542b55ba8499976e11, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoGloss1
+        second:
+          m_Texture: {fileID: 2800000, guid: 5cd53622c5b4b7445ba9e708a87c4491, type: 3}
+          m_Scale: {x: 8, y: 25}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormal1
+        second:
+          m_Texture: {fileID: 2800000, guid: 8d0a4fea052384542b55ba8499976e11, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoGloss2
+        second:
+          m_Texture: {fileID: 2800000, guid: 1b30e6de23eaaf5408dc7026d756ece2, type: 3}
+          m_Scale: {x: 12, y: 40}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormal2
+        second:
+          m_Texture: {fileID: 2800000, guid: 8d0a4fea052384542b55ba8499976e11, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoGloss3
+        second:
+          m_Texture: {fileID: 2800000, guid: 5cd53622c5b4b7445ba9e708a87c4491, type: 3}
+          m_Scale: {x: 15, y: 50}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormal3
+        second:
+          m_Texture: {fileID: 2800000, guid: 8d0a4fea052384542b55ba8499976e11, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailOcclusions
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailHeightmaps
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _AlphaTestRef
+        second: .5
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: .970000029
+      data:
+        first:
+          name: _BumpScale
+        second: .0500000007
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: .100000001
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Lightmapping
+        second: 1
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 1
+      data:
+        first:
+          name: _Orthonormalize
+        second: 0
+      data:
+        first:
+          name: _PlaneReflectionBumpScale
+        second: .25
+      data:
+        first:
+          name: _PlaneReflectionBumpClamp
+        second: .00300000003
+      data:
+        first:
+          name: _CullMode
+        second: 2
+      data:
+        first:
+          name: _EmissionTemperature
+        second: 0
+      data:
+        first:
+          name: _BaseNormalScale
+        second: 1
+      data:
+        first:
+          name: _BaseOcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _BaseHeightmapScale
+        second: .0149999997
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: .0759083033, g: .256893545, b: .264705896, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _EmissionColorWithMapUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Base2xAlbedo
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _DetailBlendMaskScale
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Detail2xAlbedoGloss0
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _DetailSpecColor0
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Detail2xAlbedoGloss1
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _DetailSpecColor1
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Detail2xAlbedoGloss2
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _DetailSpecColor2
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Detail2xAlbedoGloss3
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _DetailSpecColor3
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _DetailNormalScales
+        second: {r: .600000024, g: .800000012, b: .5, a: .300000012}
+      data:
+        first:
+          name: _DetailOcclusionStrengths
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _DetailHeightmapScales
+        second: {r: .0149999997, g: .0149999997, b: .0149999997, a: .0149999997}
+      data:
+        first:
+          name: _Base2xAlbedoBounce
+        second: {r: .5, g: .5, b: .5, a: .5}

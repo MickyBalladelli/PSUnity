@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 674e0551e96a27d4a8f76f97ed6335d4
+timeCreated: 1443280855
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cloudsat_Unity_v002 [Layer10]
+    100004: Cloudsat_Unity_v002 [Layer11]
+    100006: Cloudsat_Unity_v002 [Layer12]
+    100008: Cloudsat_Unity_v002 [Layer13]
+    100010: Cloudsat_Unity_v002 [Layer14]
+    100012: Cloudsat_Unity_v002 [Layer15]
+    100014: Cloudsat_Unity_v002 [Layer16]
+    100016: Cloudsat_Unity_v002 [Layer17]
+    100018: Cloudsat_Unity_v002 [Layer18]
+    100020: Cloudsat_Unity_v002 [Layer19]
+    100022: Cloudsat_Unity_v002 [Layer1]
+    100024: Cloudsat_Unity_v002 [Layer20]
+    100026: Cloudsat_Unity_v002 [Layer2]
+    100028: Cloudsat_Unity_v002 [Layer3]
+    100030: Cloudsat_Unity_v002 [Layer4]
+    100032: Cloudsat_Unity_v002 [Layer5]
+    100034: Cloudsat_Unity_v002 [Layer6]
+    100036: Cloudsat_Unity_v002 [Layer7]
+    100038: Cloudsat_Unity_v002 [Layer8]
+    100040: Cloudsat_Unity_v002 [Layer9]
+    400000: //RootNode
+    400002: Cloudsat_Unity_v002 [Layer10]
+    400004: Cloudsat_Unity_v002 [Layer11]
+    400006: Cloudsat_Unity_v002 [Layer12]
+    400008: Cloudsat_Unity_v002 [Layer13]
+    400010: Cloudsat_Unity_v002 [Layer14]
+    400012: Cloudsat_Unity_v002 [Layer15]
+    400014: Cloudsat_Unity_v002 [Layer16]
+    400016: Cloudsat_Unity_v002 [Layer17]
+    400018: Cloudsat_Unity_v002 [Layer18]
+    400020: Cloudsat_Unity_v002 [Layer19]
+    400022: Cloudsat_Unity_v002 [Layer1]
+    400024: Cloudsat_Unity_v002 [Layer20]
+    400026: Cloudsat_Unity_v002 [Layer2]
+    400028: Cloudsat_Unity_v002 [Layer3]
+    400030: Cloudsat_Unity_v002 [Layer4]
+    400032: Cloudsat_Unity_v002 [Layer5]
+    400034: Cloudsat_Unity_v002 [Layer6]
+    400036: Cloudsat_Unity_v002 [Layer7]
+    400038: Cloudsat_Unity_v002 [Layer8]
+    400040: Cloudsat_Unity_v002 [Layer9]
+    2300000: Cloudsat_Unity_v002 [Layer10]
+    2300002: Cloudsat_Unity_v002 [Layer11]
+    2300004: Cloudsat_Unity_v002 [Layer12]
+    2300006: Cloudsat_Unity_v002 [Layer13]
+    2300008: Cloudsat_Unity_v002 [Layer14]
+    2300010: Cloudsat_Unity_v002 [Layer15]
+    2300012: Cloudsat_Unity_v002 [Layer16]
+    2300014: Cloudsat_Unity_v002 [Layer17]
+    2300016: Cloudsat_Unity_v002 [Layer18]
+    2300018: Cloudsat_Unity_v002 [Layer19]
+    2300020: Cloudsat_Unity_v002 [Layer1]
+    2300022: Cloudsat_Unity_v002 [Layer20]
+    2300024: Cloudsat_Unity_v002 [Layer2]
+    2300026: Cloudsat_Unity_v002 [Layer3]
+    2300028: Cloudsat_Unity_v002 [Layer4]
+    2300030: Cloudsat_Unity_v002 [Layer5]
+    2300032: Cloudsat_Unity_v002 [Layer6]
+    2300034: Cloudsat_Unity_v002 [Layer7]
+    2300036: Cloudsat_Unity_v002 [Layer8]
+    2300038: Cloudsat_Unity_v002 [Layer9]
+    3300000: Cloudsat_Unity_v002 [Layer10]
+    3300002: Cloudsat_Unity_v002 [Layer11]
+    3300004: Cloudsat_Unity_v002 [Layer12]
+    3300006: Cloudsat_Unity_v002 [Layer13]
+    3300008: Cloudsat_Unity_v002 [Layer14]
+    3300010: Cloudsat_Unity_v002 [Layer15]
+    3300012: Cloudsat_Unity_v002 [Layer16]
+    3300014: Cloudsat_Unity_v002 [Layer17]
+    3300016: Cloudsat_Unity_v002 [Layer18]
+    3300018: Cloudsat_Unity_v002 [Layer19]
+    3300020: Cloudsat_Unity_v002 [Layer1]
+    3300022: Cloudsat_Unity_v002 [Layer20]
+    3300024: Cloudsat_Unity_v002 [Layer2]
+    3300026: Cloudsat_Unity_v002 [Layer3]
+    3300028: Cloudsat_Unity_v002 [Layer4]
+    3300030: Cloudsat_Unity_v002 [Layer5]
+    3300032: Cloudsat_Unity_v002 [Layer6]
+    3300034: Cloudsat_Unity_v002 [Layer7]
+    3300036: Cloudsat_Unity_v002 [Layer8]
+    3300038: Cloudsat_Unity_v002 [Layer9]
+    4300000: Cloudsat_Unity_v002 [Layer1]
+    4300002: Cloudsat_Unity_v002 [Layer2]
+    4300004: Cloudsat_Unity_v002 [Layer3]
+    4300006: Cloudsat_Unity_v002 [Layer4]
+    4300008: Cloudsat_Unity_v002 [Layer5]
+    4300010: Cloudsat_Unity_v002 [Layer6]
+    4300012: Cloudsat_Unity_v002 [Layer7]
+    4300014: Cloudsat_Unity_v002 [Layer8]
+    4300016: Cloudsat_Unity_v002 [Layer9]
+    4300018: Cloudsat_Unity_v002 [Layer10]
+    4300020: Cloudsat_Unity_v002 [Layer11]
+    4300022: Cloudsat_Unity_v002 [Layer12]
+    4300024: Cloudsat_Unity_v002 [Layer13]
+    4300026: Cloudsat_Unity_v002 [Layer14]
+    4300028: Cloudsat_Unity_v002 [Layer15]
+    4300030: Cloudsat_Unity_v002 [Layer16]
+    4300032: Cloudsat_Unity_v002 [Layer17]
+    4300034: Cloudsat_Unity_v002 [Layer18]
+    4300036: Cloudsat_Unity_v002 [Layer19]
+    4300038: Cloudsat_Unity_v002 [Layer20]
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: e618304d1ae0a4f408c65d8550bf8298
+timeCreated: 1432013505
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bridge_02_arc_left
+    100004: Bridge_02_arc_right
+    100006: Bridge_02_cliff_left
+    100008: Bridge_02_cliff_right
+    100010: Bridge_02_Decal_01
+    100012: Bridge_02_Decal_Radial_01
+    100014: Bridge_02_floor_left
+    100016: Bridge_02_floor_right
+    100018: Bridge_02_grass_left
+    100020: Bridge_02_grass_right
+    100022: Bridge_02_main_left
+    100024: Bridge_02_main_left_MeshPart0
+    100026: Bridge_02_main_left_MeshPart1
+    100028: Bridge_02_main_right
+    100030: Bridge_02_main_right_MeshPart0
+    100032: Bridge_02_main_right_MeshPart1
+    100034: Bridge_02_moss_left
+    100036: Bridge_02_moss_right
+    100038: Bridge_02_planks
+    100040: Plane001
+    100042: Plane002
+    100044: Bridge_02_cliff_left001
+    100046: Bridge_02_cliff_left002
+    100048: Plane003
+    100050: Plane004
+    100052: Plane005
+    400000: //RootNode
+    400002: Bridge_02_arc_left
+    400004: Bridge_02_arc_right
+    400006: Bridge_02_cliff_left
+    400008: Bridge_02_cliff_right
+    400010: Bridge_02_Decal_01
+    400012: Bridge_02_Decal_Radial_01
+    400014: Bridge_02_floor_left
+    400016: Bridge_02_floor_right
+    400018: Bridge_02_grass_left
+    400020: Bridge_02_grass_right
+    400022: Bridge_02_main_left
+    400024: Bridge_02_main_left_MeshPart0
+    400026: Bridge_02_main_left_MeshPart1
+    400028: Bridge_02_main_right
+    400030: Bridge_02_main_right_MeshPart0
+    400032: Bridge_02_main_right_MeshPart1
+    400034: Bridge_02_moss_left
+    400036: Bridge_02_moss_right
+    400038: Bridge_02_planks
+    400040: Plane001
+    400042: Plane002
+    400044: Bridge_02_cliff_left001
+    400046: Bridge_02_cliff_left002
+    400048: Plane003
+    400050: Plane004
+    400052: Plane005
+    2300000: //RootNode
+    2300002: Bridge_02_arc_left
+    2300004: Bridge_02_arc_right
+    2300006: Bridge_02_cliff_left
+    2300008: Bridge_02_cliff_right
+    2300010: Bridge_02_Decal_01
+    2300012: Bridge_02_Decal_Radial_01
+    2300014: Bridge_02_floor_left
+    2300016: Bridge_02_floor_right
+    2300018: Bridge_02_grass_left
+    2300020: Bridge_02_grass_right
+    2300022: Bridge_02_main_left_MeshPart0
+    2300024: Bridge_02_main_left_MeshPart1
+    2300026: Bridge_02_main_right_MeshPart0
+    2300028: Bridge_02_main_right_MeshPart1
+    2300030: Bridge_02_moss_left
+    2300032: Bridge_02_moss_right
+    2300034: Bridge_02_planks
+    2300036: Plane001
+    2300038: Plane002
+    2300040: Bridge_02_cliff_left001
+    2300042: Bridge_02_cliff_left002
+    2300044: Plane003
+    2300046: Bridge_02_main_left
+    2300048: Bridge_02_main_right
+    2300050: Plane004
+    2300052: Plane005
+    3300000: //RootNode
+    3300002: Bridge_02_arc_left
+    3300004: Bridge_02_arc_right
+    3300006: Bridge_02_cliff_left
+    3300008: Bridge_02_cliff_right
+    3300010: Bridge_02_Decal_01
+    3300012: Bridge_02_Decal_Radial_01
+    3300014: Bridge_02_floor_left
+    3300016: Bridge_02_floor_right
+    3300018: Bridge_02_grass_left
+    3300020: Bridge_02_grass_right
+    3300022: Bridge_02_main_left_MeshPart0
+    3300024: Bridge_02_main_left_MeshPart1
+    3300026: Bridge_02_main_right_MeshPart0
+    3300028: Bridge_02_main_right_MeshPart1
+    3300030: Bridge_02_moss_left
+    3300032: Bridge_02_moss_right
+    3300034: Bridge_02_planks
+    3300036: Plane001
+    3300038: Plane002
+    3300040: Bridge_02_cliff_left001
+    3300042: Bridge_02_cliff_left002
+    3300044: Plane003
+    3300046: Bridge_02_main_left
+    3300048: Bridge_02_main_right
+    3300050: Plane004
+    3300052: Plane005
+    4300000: Bridge_wooden001
+    4300002: Bridge_02_main_left_MeshPart0
+    4300004: Bridge_02_main_left_MeshPart1
+    4300006: Bridge_02_arc_right
+    4300008: Bridge_02_arc_left
+    4300010: Bridge_02_main_right_MeshPart0
+    4300012: Bridge_02_main_right_MeshPart1
+    4300014: Bridge_02_floor_right
+    4300016: Bridge_02_floor_left
+    4300018: Bridge_02_Decal_01
+    4300020: Bridge_02_moss_right
+    4300022: Bridge_02_moss_left
+    4300024: Bridge_02_Decal_Radial_01
+    4300026: Bridge_02_planks
+    4300028: Bridge_02_grass_left
+    4300030: Bridge_02_grass_right
+    4300032: Bridge_02_cliff_left
+    4300034: Bridge_02_cliff_right
+    4300036: Plane001
+    4300038: Plane002
+    4300040: Plane003
+    4300042: Bridge_02_cliff_left001
+    4300044: Bridge_02_cliff_left002
+    4300046: Bridge_02_main_left
+    4300048: Bridge_02_main_right
+    4300050: Plane004
+    4300052: Plane005
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

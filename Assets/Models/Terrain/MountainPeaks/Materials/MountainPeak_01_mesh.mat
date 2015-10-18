@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MountainPeak_01_mesh
+  m_Shader: {fileID: 4800000, guid: 8617c3181eef60e4480b9e9ffa8ef6a7, type: 3}
+  m_ShaderKeywords: _DETAIL_MULX2 _LIGHTMAPPING_REALTIME _NORMALMAP _UVSEC_UV1
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 4a2fe991ed466e44da7d1c55224a5209, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 81f7d9145d4829d4db4e2cd6513b72f4, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 8b08c89a36e128349b249318ee3bb1e6, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 2800000, guid: f251617538c2e7449845f22823a371ab, type: 3}
+          m_Scale: {x: 10, y: 10}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 4e18bdc4624dadf4dac2b83167ede3b5, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionTempRamp
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MaskyMixAlbedo
+        second:
+          m_Texture: {fileID: 2800000, guid: 8e6fe926e61dbc646bbfe0fa7ec0de4b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MaskyMixBumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 67e7a4d4b730e5c4a8dc7904a28a518b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MaskyMixMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _AlphaTestRef
+        second: .5
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: .0340000018
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: .671999991
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: .400000006
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Lightmapping
+        second: 1
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Orthonormalize
+        second: 0
+      data:
+        first:
+          name: _PlaneReflectionBumpScale
+        second: .400000006
+      data:
+        first:
+          name: _PlaneReflectionBumpClamp
+        second: .0500000007
+      data:
+        first:
+          name: _CullMode
+        second: 2
+      data:
+        first:
+          name: _EmissionTemperature
+        second: 0
+      data:
+        first:
+          name: _SmoothnessInAlbedo
+        second: 0
+      data:
+        first:
+          name: _MetaAlbedoDesaturation
+        second: 0
+      data:
+        first:
+          name: _MaskyMixUVTile
+        second: 25
+      data:
+        first:
+          name: _MaskyMixBumpScale
+        second: 1
+      data:
+        first:
+          name: _MaskyMixMaskTile
+        second: 10
+      data:
+        first:
+          name: _MaskyMixMaskFalloff
+        second: .25999999
+      data:
+        first:
+          name: _MaskyMixMaskThresholdLow
+        second: .713
+      data:
+        first:
+          name: _MaskyMixMaskThresholdHi
+        second: .920000017
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _Color
+        second: {r: .720588207, g: .720588207, b: .720588207, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .0882353187, g: .0882353187, b: .0882353187, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _EmissionColorWithMapUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _MetaAlbedoTint
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _MetaAlbedoAdd
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _MaskyMixColor
+        second: {r: .571583807, g: .705886245, b: .358137637, a: .5}
+      data:
+        first:
+          name: _MaskyMixSpecColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+      data:
+        first:
+          name: _MaskyMixWorldDirection
+        second: {r: 0, g: 1, b: 0, a: 0}

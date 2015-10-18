@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11457314}
+  m_Layer: 0
+  m_Name: AtmosphericScattering
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11457314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5e5809d1a094f4dadcea7dac27bd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldRayleighColorRamp:
+    key0:
+      serializedVersion: 2
+      rgba: 4287657330
+    key1:
+      serializedVersion: 2
+      rgba: 4282857258
+    key2:
+      serializedVersion: 2
+      rgba: 255
+    key3:
+      serializedVersion: 2
+      rgba: 63743
+    key4:
+      serializedVersion: 2
+      rgba: 0
+    key5:
+      serializedVersion: 2
+      rgba: 0
+    key6:
+      serializedVersion: 2
+      rgba: 0
+    key7:
+      serializedVersion: 2
+      rgba: 0
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 41249
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  worldRayleighColorIntensity: 1.10000002
+  worldRayleighDensity: 55.7999992
+  worldRayleighExtinctionFactor: 1.29999995
+  worldRayleighIndirectScatter: .400000006
+  worldMieColorRamp:
+    key0:
+      serializedVersion: 2
+      rgba: 4280164095
+    key1:
+      serializedVersion: 2
+      rgba: 4282158335
+    key2:
+      serializedVersion: 2
+      rgba: 0
+    key3:
+      serializedVersion: 2
+      rgba: 0
+    key4:
+      serializedVersion: 2
+      rgba: 0
+    key5:
+      serializedVersion: 2
+      rgba: 0
+    key6:
+      serializedVersion: 2
+      rgba: 0
+    key7:
+      serializedVersion: 2
+      rgba: 0
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  worldMieColorIntensity: 1
+  worldMieDensity: 5.26000023
+  worldMieExtinctionFactor: 1
+  worldMiePhaseAnisotropy: .75
+  worldNearScatterPush: 0
+  worldNormalDistance: 1000
+  heightRayleighColor: {r: .501730084, g: .576816559, b: .852941155, a: 1}
+  heightRayleighIntensity: 1
+  heightRayleighDensity: 44.4000015
+  heightMieDensity: 3
+  heightExtinctionFactor: 1.10000002
+  heightSeaLevel: -3.0999999
+  heightDistance: 10
+  heightPlaneShift: {x: 0, y: 0, z: 0}
+  heightNearScatterPush: 0
+  heightNormalDistance: 1000
+  skyDomeScale: {x: 1, y: .100000001, z: 1}
+  skyDomeRotation: {x: 1.83000004, y: -548.099976, z: 0}
+  skyDomeTrackedYawRotation: {fileID: 0}
+  skyDomeVerticalFlip: 0
+  skyDomeCube: {fileID: 8900000, guid: 6863b23824048d440956247b7d58f8ae, type: 3}
+  skyDomeExposure: 2
+  skyDomeTint: {r: 1, g: 1, b: 1, a: 1}
+  skyDomeOffset: {x: 0, y: 0, z: 0}
+  useOcclusion: 0
+  occlusionBias: 0
+  occlusionBiasIndirect: .800000012
+  occlusionBiasClouds: .100000001
+  occlusionDownscale: 2
+  occlusionSamples: 0
+  occlusionDepthFixup: 1
+  occlusionDepthThreshold: 25
+  occlusionFullSky: 1
+  occlusionBiasSkyRayleigh: .200000003
+  occlusionBiasSkyMie: .400000006
+  worldScaleExponent: 1
+  forcePerPixel: 0
+  depthTexture: 0
+  debugMode: 0
+  occlusionShader: {fileID: 4800000, guid: 0997715dbbf3a1e41b8df8c3d734e682, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

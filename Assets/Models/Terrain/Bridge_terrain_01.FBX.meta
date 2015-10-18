@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 240df54d87024cf4aa4b750bd5282075
+timeCreated: 1433923189
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Terrain_cliff_01
+    100004: Terrain_cliff_02
+    100006: Terrain_cliff_03
+    100008: Terrain_cliff_04
+    100010: Terrain_cliff_05
+    100012: Terrain_cliff_06
+    100014: Terrain_cliff_07
+    100016: Terrain_ground_01
+    100018: Terrain_ground_02
+    100020: Terrain_ground_plane
+    400000: //RootNode
+    400002: Terrain_cliff_01
+    400004: Terrain_cliff_02
+    400006: Terrain_cliff_03
+    400008: Terrain_cliff_04
+    400010: Terrain_cliff_05
+    400012: Terrain_cliff_06
+    400014: Terrain_cliff_07
+    400016: Terrain_ground_01
+    400018: Terrain_ground_02
+    400020: Terrain_ground_plane
+    2300000: Terrain_cliff_01
+    2300002: Terrain_cliff_02
+    2300004: Terrain_cliff_03
+    2300006: Terrain_cliff_04
+    2300008: Terrain_cliff_05
+    2300010: Terrain_cliff_06
+    2300012: Terrain_cliff_07
+    2300014: Terrain_ground_01
+    2300016: Terrain_ground_02
+    2300018: Terrain_ground_plane
+    3300000: Terrain_cliff_01
+    3300002: Terrain_cliff_02
+    3300004: Terrain_cliff_03
+    3300006: Terrain_cliff_04
+    3300008: Terrain_cliff_05
+    3300010: Terrain_cliff_06
+    3300012: Terrain_cliff_07
+    3300014: Terrain_ground_01
+    3300016: Terrain_ground_02
+    3300018: Terrain_ground_plane
+    4300000: Terrain_ground_01
+    4300002: Terrain_ground_02
+    4300004: Terrain_cliff_03
+    4300006: Terrain_cliff_05
+    4300008: Terrain_cliff_04
+    4300010: Terrain_cliff_02
+    4300012: Terrain_cliff_01
+    4300014: Terrain_cliff_06
+    4300016: Terrain_cliff_07
+    4300018: Terrain_ground_plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

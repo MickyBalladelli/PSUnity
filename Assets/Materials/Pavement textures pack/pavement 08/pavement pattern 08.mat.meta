@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0c26b4c84ab19ad458dc8f02ac1747a7
+labels:
+- Architecture
+- Brick
+- Ground
+- Pattern
+- Pavement
+- Terrain
+- Tile
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

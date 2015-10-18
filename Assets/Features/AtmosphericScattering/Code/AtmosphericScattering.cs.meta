@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8e5e5809d1a094f4dadcea7dac27bd7f
+timeCreated: 1424879655
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - skyDomeCube: {instanceID: 0}
+  - shadowStaticAnchor: {instanceID: 0}
+  - bakedShadowMap: {instanceID: 0}
+  - tempDepthRender: {fileID: 4800000, guid: a4241d712f13fdb488422f00d4eb6e21, type: 3}
+  - occlusionShader: {fileID: 4800000, guid: 0997715dbbf3a1e41b8df8c3d734e682, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

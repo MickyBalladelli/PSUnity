@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: b8ab4b30f0239bb47a4580c5908772a4
+timeCreated: 1429059326
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - tiltShiftShader: {fileID: 4800000, guid: 55e85b3f702553b48892094186566f02, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  m_Layer: 0
+  m_Name: SideObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1002 &100001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!1 &100016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400022}
+  - 114: {fileID: 11400012}
+  m_Layer: 0
+  m_Name: EasyRoad3DObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1002 &100017
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!1 &100018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400024}
+  m_Layer: 0
+  m_Name: Markers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1002 &100019
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!1 &100036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400016}
+  - 33: {fileID: 3300016}
+  - 23: {fileID: 2300016}
+  - 64: {fileID: 6400000}
+  m_Layer: 31
+  m_Name: road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1002 &100037
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+  m_RootOrder: 0
+--- !u!1002 &400001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!4 &400016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -183.93335, y: 141.43309, z: -542.479492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+  m_RootOrder: 2
+--- !u!1002 &400017
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!4 &400022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400000}
+  - {fileID: 400024}
+  - {fileID: 400016}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1002 &400023
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!4 &400024
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+  m_RootOrder: 1
+--- !u!1002 &400025
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!23 &2300016
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 84796f45c2e03bc409167505c3aee5d0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!1002 &2300017
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!33 &3300016
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Mesh: {fileID: 0}
+--- !u!1002 &3300017
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!64 &6400000
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
+--- !u!1002 &6400001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db269d104447e7a4aa259e1ed04c6481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 0
+  displayRoad: 1
+  roadWidth: 5
+  indent: 2.76213598
+  surrounding: 5
+  raise: 1
+  raiseMarkers: 0
+  OOQDOOQQ: 0
+  renderRoad: 1
+  beveledRoad: 0
+  applySplatmap: 0
+  splatmapLayer: 4
+  autoUpdate: 0
+  geoResolution: 2.91791034
+  roadResolution: 1
+  tuw: 15
+  splatmapSmoothLevel: 0
+  opacity: 1
+  expand: 0
+  offsetX: 0
+  offsetY: 0
+  surfaceOpacity: 1
+  smoothDistance: 1
+  smoothSurDistance: 3
+  handleVegetation: 1
+  OCQCQQOCCQ: 2
+  ODCOOQCCCQ: 1
+  materialType: 1
+  uname: 
+  email: 
+  OQDODQDOCO: []
+  ODODQOQO: []
+  ODODQOQOInt: 
+  OQOQOOOQQO: -1
+  OCCDDDDDCD: -1
+  OQOQOOOCQO: 0
+  OQQODCQODC: 0
+  markers: 0
+  OCCDOQDQQD: 0
+  doTerrain: 0
+  OCCQQCQQOQs: []
+  obj: {fileID: 0}
+  flyby: 0
+  OOODODOQDC: {fileID: 0}
+  OdQODQOD: 1
+  OOQQQDOD: 0
+  OOQQQDODOffset: 0
+  OOQQQDODLength: 0
+  ODODDDOO: 0
+  ODQDOOQO: 0
+  ODQQQQQO: []
+  ODODDQOO: []
+  ODODQQOD: 
+  OOQQQOQO: 
+  ODOQOOQO: 0
+  forceY: 0
+  yChange: 0
+  floorDepth: 2
+  waterLevel: .5
+  lockWaterLevel: 1
+  lastY: 0
+  distance: 0
+  markerDisplayStr: Hide Markers
+  objectText: Road
+  applyAnimation: 0
+  waveSize: .5
+  waveHeight: .150000006
+  snapY: 1
+  autoODODDQQO: 0
+  roadTexture: {fileID: 0}
+  roadMaterial: {fileID: 0}
+  OOQOOQCDDQ: []
+  OOQCDQCQCQ: []
+  selectedWaterMaterial: 0
+  selectedWaterScript: 0
+  doFlyOver: 0
+  goCam: {fileID: 0}
+  speed: 1
+  offset: 0
+  camInit: 0
+  customMesh: {fileID: 0}
+  multipleTerrains: 0
+  editRestore: 1
+  roadMaterialEdit: {fileID: 0}
+  backupStrings:
+  - Outside Assets folder path
+  - Inside Assets folder path
+  leftVecs: []
+  rightVecs: []
+  applyTangents: 0
+  sosBuild: 0
+  splinePos: 0
+  camHeight: 3
+  splinePosV3: {x: 0, y: 0, z: 0}
+  blendFlag: 0
+  startBlendDistance: 5
+  endBlendDistance: 5
+  iOS: 0
+--- !u!1002 &11400013
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100016}
+  m_IsPrefabParent: 1
+--- !u!1002 &100100001
+EditorExtensionImpl:
+  serializedVersion: 6

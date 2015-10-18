@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 79d4f1cfd7aa0814db635e9a39c49eee
+timeCreated: 1434626731
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - deferredFogShader: {fileID: 4800000, guid: cf9fe3c6badaedf4aa507a8a3eae07cc, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 87dbbcdaa38934547a83bc9754a3f39b
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - growthShader: {fileID: 4800000, guid: 661e565482aee0e49acd84943ffb38c2, type: 3}
+  - growthAtlasTexture: {instanceID: 0}
+  - captureShader: {fileID: 4800000, guid: 074e22af492e3104a83cf3ad9fb1aac6, type: 3}
+  - capturedColormap: {instanceID: 0}
+  - terrainTemplate: {fileID: 15600000, guid: f52297d46b820ac4a80312e5f0746519, type: 2}
+  - debugGrassMesh: {instanceID: 0}
+  - debugMaterial: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
