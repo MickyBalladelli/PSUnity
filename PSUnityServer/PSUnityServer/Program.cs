@@ -210,7 +210,8 @@ namespace PSUnityServer
                                     {
                                         writer.WriteLine(c.command);
                                     }
-                                    
+                                    Console.WriteLine("Sent {0} cities", cities.Count);
+
                                     foreach (GalaxyElement g in galaxies)
                                     {
                                         writer.WriteLine(g.command);

@@ -93,7 +93,10 @@ public class DataCentreController : MonoBehaviour
             SmoothFollow sf = Camera.main.GetComponent<SmoothFollow>();
             if (!movingTruck1)
             {
-                truck1.GoToTarget();
+                NavMeshAgent agent;
+                agent = truck1.GetComponent<NavMeshAgent>();
+                agent.SetDestination(cluster2.transform.position);
+
                 sf.SetDistance(70);
                 sf.SetTarget(truck1.transform);
             }
@@ -144,7 +147,10 @@ public class DataCentreController : MonoBehaviour
             SmoothFollow sf = Camera.main.GetComponent<SmoothFollow>();
             if (!movingTruck2)
             {
-                truck2.GoToTarget();
+                NavMeshAgent agent;
+                agent = truck2.GetComponent<NavMeshAgent>();
+                agent.SetDestination(cluster1.transform.position);
+
                 sf.SetDistance(70);
                 sf.SetTarget(truck2.transform);
             }
@@ -157,7 +163,6 @@ public class DataCentreController : MonoBehaviour
                 {
                     countdown = 2F;
                     sf.SetTarget(null);
-                    truck2.GoToSource();
                     movingTruck2 = false;
                     if (messageList.Count == 0)
                         mainController.DisplayIsUpdating(false);
@@ -174,6 +179,9 @@ public class DataCentreController : MonoBehaviour
                         truckInstanceList2.Remove(truckInstanceList2[i]);
                         i--;
                     }
+
+                    truck2.GoToSource();
+
                 }
             }
         }
@@ -258,13 +266,11 @@ public class DataCentreController : MonoBehaviour
                                     m.message = now + " " + "Moving VM: " + VMname + " to site " + nameSite2;
                                     m.status = "1"; // white
                                     messageList.Add(m);
-                                    // instance for multiple trucks approach, to be implemented
-                                    //truck1 = (GameObject)Instantiate(truck1prefab, new Vector3(-12.2F, 11.28F, 324.7F), new Quaternion(-14.25281F, -8.512268F, 0, 0));
+
                                     instanceList1[i].instance.transform.SetParent(truck1.transform, true);
                                     truckInstanceList1.Add(instanceList1[i]);
                                     countdown = 2F;
                                     instanceList1.Remove(instanceList1[i]);
-                                    //i--;
                                 }
                                 else
                                 {
@@ -302,6 +308,8 @@ public class DataCentreController : MonoBehaviour
                                     m.status = "1"; // white
                                     messageList.Add(m);
 
+//                                    truck2 = (GameObject)Instantiate(truck2prefab, new Vector3(122.17F, 11.28F, 320.2F), new Quaternion(0, 0, 0, 0));
+
                                     instanceList2[i].instance.transform.SetParent(truck2.transform, true);
                                     truckInstanceList2.Add(instanceList2[i]);
                                     countdown = 2F;
@@ -334,10 +342,6 @@ public class DataCentreController : MonoBehaviour
                         GameObject sphere;
                         MessageData m = new MessageData();
                         string now = DateTime.Now.ToString("H:mm:ss");
-
-                        //m.message = now + " " + "New VM: " + VMname + " Host: " + VMhost + " Cluster: " + cluster + " Info: " + description;
-                        //m.status = status;
-                        // messageList.Add(m);
 
                         if (site == "1")
                             sphere = sphere1;
@@ -456,14 +460,14 @@ public class DataCentreController : MonoBehaviour
         style.stretchWidth = false;
         style.stretchHeight = false;
         style.alignment = TextAnchor.UpperLeft;
-        int numElements = 8;
-     //   GUILayout.BeginVertical();
+        int numElements = 5;
+
         GUI.contentColor = Color.white;
 
         // Calc height of window
         if (mainController != null)
         {
-            style.fontSize = 14;
+            style.fontSize = 20;
             float height = style.lineHeight * numElements;
             mainController.vMrect.height = height;
             mainController.vMrect.y = Screen.height - height;
@@ -581,9 +585,9 @@ public class DataCentreController : MonoBehaviour
         style.normal.textColor = Color.white;
 
         if (movingTruck1)
-            GUILayout.Label("Moving to " + nameSite2 + ": " + truckInstanceList1.Count, style);
+            GUILayout.Label("Moving to " + nameSite2 + " " + truckInstanceList1.Count + " VMs", style);
         if (movingTruck2)
-            GUILayout.Label("Moving to " + nameSite1 + ": " + truckInstanceList2.Count, style);
+            GUILayout.Label("Moving to " + nameSite1 + " " + truckInstanceList2.Count + " VMs", style);
 
 
         float width = 0f;
@@ -591,7 +595,7 @@ public class DataCentreController : MonoBehaviour
 
         if (messageCountdown <= 0)
         {
-            if (messageList.Count > 0)
+            if (messageList.Count > 1)
                 messageList.RemoveAt(0);
 
             if (messageList.Count > 10)
@@ -633,9 +637,9 @@ public class DataCentreController : MonoBehaviour
             }
             
             GUILayout.Label(messageList[i].message, style);
-            Vector2 v = style.CalcSize(new GUIContent(messageList[i].message));
-            if (v.x > width)
-                width = v.x;
+//            Vector2 v = style.CalcSize(new GUIContent(messageList[i].message));
+//            if (v.x > width)
+//                width = v.x;
 
             
 
@@ -644,7 +648,7 @@ public class DataCentreController : MonoBehaviour
         //Save width in rect
         if (mainController != null)
         {
-            width = 350;
+            width = 500;
             mainController.vMrect.width = width;
             mainController.vMrect.x = Screen.width/2 - width/2; 
         }
