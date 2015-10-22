@@ -493,21 +493,21 @@ public class DataCentreController : MonoBehaviour
         }
         GUILayout.BeginHorizontal(style);
         style.normal.textColor = Color.white;
-        GUILayout.Label("VMs in " + nameSite1 + " : ", style);
+        GUILayout.Label("VMs in " + nameSite1 + " :", style);
         if (normal > 0)
         {
             style.normal.textColor = Color.green;
-            GUILayout.Label(normal.ToString(), style);
+            GUILayout.Label(" " + normal.ToString() + " ", style);
         }
         if (info > 0)
         {
             style.normal.textColor = Color.blue;
-            GUILayout.Label(info.ToString(), style);
+            GUILayout.Label(" " + info.ToString() + " ", style);
         }
         if (warning > 0)
         {
             style.normal.textColor = Color.yellow;
-            GUILayout.Label(warning.ToString(), style);
+            GUILayout.Label(" " + warning.ToString() + " ", style);
         }
         if (error > 0)
         {
@@ -515,12 +515,12 @@ public class DataCentreController : MonoBehaviour
             ColorUtility.TryParseHtmlString("#FF8F18FF", out color);
             style.normal.textColor = color;
 
-            GUILayout.Label(error.ToString(), style);
+            GUILayout.Label(" " + error.ToString() + " ", style);
         }
         if (critical > 0)
         {
             style.normal.textColor = Color.red;
-            GUILayout.Label(critical.ToString(), style);
+            GUILayout.Label(" " + critical.ToString() + " ", style);
         }
         GUILayout.EndHorizontal();
 
