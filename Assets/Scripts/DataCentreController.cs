@@ -645,9 +645,9 @@ public class DataCentreController : MonoBehaviour
         //Save width in rect
         if (mainController != null)
         {
-            width = 500;
+            width = 1000;
             mainController.vMrect.width = width;
-            mainController.vMrect.x = Screen.width/2 - width/2; 
+            mainController.vMrect.x = Screen.width/2 - 500/2; 
         }
 //        GUILayout.EndVertical();
 
