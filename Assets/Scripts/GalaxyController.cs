@@ -153,9 +153,13 @@ public class GalaxyController : MonoBehaviour {
                         }
                         for (int i = 0; i < m_pDust.Count; i++)
                         {
-                            GameObject dustObject = (GameObject)Instantiate(dustPrefab, new Vector3(m_pDust[i].m_pos.x, 0, m_pDust[i].m_pos.y), new Quaternion(0, 0, 0, 0));
-                            dustObject.transform.SetParent(gameObject.transform, false);
-                            dust.Add(dustObject);
+                            // Let one dust go if it's a NaN
+                            if (!float.IsNaN(m_pDust[i].m_pos.x) && !float.IsNaN(m_pDust[i].m_pos.y))
+                            {
+                                GameObject dustObject = (GameObject)Instantiate(dustPrefab, new Vector3(m_pDust[i].m_pos.x, 0, m_pDust[i].m_pos.y), new Quaternion(0, 0, 0, 0));
+                                dustObject.transform.SetParent(gameObject.transform, false);
+                                dust.Add(dustObject);
+                            }
                         }
                     }
                 }
@@ -174,7 +178,8 @@ public class GalaxyController : MonoBehaviour {
         }
         for (int i = 0; i < dust.Count; i++)
         {
-            dust[i].transform.position = new Vector3(m_pDust[i].m_pos.x, 0, m_pDust[i].m_pos.y);
+            if (!float.IsNaN(m_pDust[i].m_pos.x) && !float.IsNaN(m_pDust[i].m_pos.y))
+                dust[i].transform.position = new Vector3(m_pDust[i].m_pos.x, 0, m_pDust[i].m_pos.y);
         }
         for (int i = 0; i < h2Stars.Count; i++)
         {
