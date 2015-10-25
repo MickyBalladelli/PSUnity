@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Threading;
 
 public class InstanceVMData
 {
@@ -12,12 +13,6 @@ public class InstanceVMData
     public string cluster;
     public string description;
     public GameObject instance;
-    public Vector3 targetPos;
-    public bool movingToPos;
-    public GameObject targetSphere;
-    public bool shuttingDown;
-    public GameObject siteObject;
-
 }
 public class MessageData
 {
@@ -52,6 +47,7 @@ public class DataCentreController : MonoBehaviour
     string nameSite1 = "Site 1";
     string nameSite2 = "Site 2";
 
+
     bool movingTruck1 = false;
     bool movingTruck2 = false;
 
@@ -75,26 +71,12 @@ public class DataCentreController : MonoBehaviour
     {
 
     }
-    // Called after update
 	private void LateUpdate()
 	{
     }
  
     private void Update()
     {
-        // See if within each site there is a new VM to move to position
-        // or if a VM is shutting down
-        for (int i = 0; i < instanceList1.Count; i++)
-        {
-            StartVM(instanceList1[i]);
-            i = ShutdownVM(cluster1, instanceList1, i);
-        }
-        for (int i = 0; i < instanceList2.Count; i++)
-        {
-            StartVM(instanceList2[i]);
-            i = ShutdownVM(cluster2, instanceList2, i);
-        }
-
         // See if trucks have something to move
         if (!movingTruck1)
         {
@@ -250,40 +232,38 @@ public class DataCentreController : MonoBehaviour
                     //Debug.LogFormat("Command {0} {1} {2} {3} {4} {5} {6} {7} {8}", command, name, x, z, width, height, rotation, status, description);
 
                     bool found = false;
-                    // See if the VM is currently moving to cluster 2
+
                     foreach (InstanceVMData instance in truckInstanceList1)
                     {
                         if (instance.VMname == VMname)
                         {
-                            UpdateVM(instance, status);
+                            UpdateVM(instance.instance, status);
 
                             found = true;
                             break;
                         }
                     }
-                    // See if the VM is currently moving to cluster 1
                     foreach (InstanceVMData instance in truckInstanceList2)
                     {
                         if (instance.VMname == VMname)
                         {
-                            UpdateVM(instance, status);
+                            UpdateVM(instance.instance, status);
                             found = true;
                             break;
                         }
                     }
-                    // See if the VM is currently in cluster 1
                     if (!found)
                     {
                         for (int i = 0; i < instanceList1.Count; i++)
                         {
                             if (instanceList1[i].VMname == VMname)
                             {
-                                // See if the VM is to be moved to cluster 2                                
+                                
                                 if (site == "2")
                                 {
                                     string now = DateTime.Now.ToString("H:mm:ss");
                                     MessageData m = new MessageData();
-                                    m.message = now + " " + VMname + ": moving to site " + nameSite2;
+                                    m.message = now + " " + "Moving VM: " + VMname + " to site " + nameSite2;
                                     m.status = "1"; // white
                                     messageList.Add(m);
 
@@ -294,22 +274,18 @@ public class DataCentreController : MonoBehaviour
                                 }
                                 else
                                 {
-                                    // See if the VM status or description has changed
                                     if (instanceList1[i].status != status || instanceList1[i].description != description)
                                     {
-                                        UpdateVM(instanceList1[i], status);
+                                        UpdateVM(instanceList1[i].instance, status);
 
                                         instanceList1[i].status = status;
                                         instanceList1[i].description = description;
 
-                                        if (description != "")
-                                        {
-                                            string now = DateTime.Now.ToString("H:mm:ss");
-                                            MessageData m = new MessageData();
-                                            m.message = now + " " + VMname + ": " + description;
-                                            m.status = status;
-                                            messageList.Add(m);
-                                        }
+                                        string now = DateTime.Now.ToString("H:mm:ss");
+                                        MessageData m = new MessageData();
+                                        m.message = now + " " + "Update VM: " + VMname + " status " + description;
+                                        m.status = status;
+                                        messageList.Add(m);
                                     }
                                 }
                                 found = true;
@@ -319,17 +295,16 @@ public class DataCentreController : MonoBehaviour
                     }
                     if (!found)
                     {
-                        // See if the VM is in cluster 2
                         for (int i = 0; i < instanceList2.Count; i++)
                         {
                             if (instanceList2[i].VMname == VMname)
                             {
-                                // See if the VM needs to be moved to Cluster 1
+
                                 if (site == "1")
                                 {
                                     string now = DateTime.Now.ToString("H:mm:ss");
                                     MessageData m = new MessageData();
-                                    m.message = now + " " + VMname + ": moving to site " +nameSite1;
+                                    m.message = now + " " + "Moving VM: " + VMname + " to site " +nameSite1;
                                     m.status = "1"; // white
                                     messageList.Add(m);
 
@@ -341,22 +316,17 @@ public class DataCentreController : MonoBehaviour
                                 }
                                 else
                                 {
-                                    // See if the VM status or description has changed
                                     if (instanceList2[i].status != status || instanceList2[i].description != description)
                                     {
-                                        UpdateVM(instanceList2[i], status);
+                                        UpdateVM(instanceList2[i].instance, status);
 
                                         instanceList2[i].status = status;
                                         instanceList2[i].description = description;
-
-                                        if (description != "")
-                                        {
-                                            string now = DateTime.Now.ToString("H:mm:ss");
-                                            MessageData m = new MessageData();
-                                            m.message = now + " " + VMname + ": " + description;
-                                            m.status = status;
-                                            messageList.Add(m);
-                                        }
+                                        string now = DateTime.Now.ToString("H:mm:ss");
+                                        MessageData m = new MessageData();
+                                        m.message = now + " " + "Update VM: " + VMname + " status " + description;
+                                        m.status = status;
+                                        messageList.Add(m);
                                     }                                
                                 }
                                 found = true;
@@ -364,61 +334,28 @@ public class DataCentreController : MonoBehaviour
                             }
                         }
                     }
-                    // Still not found? Then it's a brand new VM
                     if (!found)
                     {
-                        GameObject sphere, targetCluster;
+                        GameObject sphere;
+                        MessageData m = new MessageData();
                         string now = DateTime.Now.ToString("H:mm:ss");
 
                         if (site == "1")
-                        {
                             sphere = sphere1;
-                            targetCluster = cluster1;
-                        }
                         else
-                        {
                             sphere = sphere2;
-                            targetCluster = cluster2;
-                        }
 
                         Renderer renderer = sphere.GetComponent<Renderer>();
                         float radius = renderer.bounds.extents.magnitude;
+                        Vector3 pos = sphere.transform.position + UnityEngine.Random.insideUnitSphere * radius/2;
+                        instanceData.instance = (GameObject)Instantiate(VMprefab, pos, new Quaternion(0, 0, 0, 0));
+                        instanceData.instance.transform.SetParent(sphere.transform, true);
 
-                        if (status == "5")
-                        {
-                            instanceData.movingToPos = true;
-                            instanceData.targetPos = sphere.transform.position + UnityEngine.Random.insideUnitSphere * radius / 2;
-                            instanceData.targetSphere = sphere;
-                            instanceData.instance = (GameObject)Instantiate(VMprefab, targetCluster.transform.position, new Quaternion(0, 0, 0, 0));
-
-                            MessageData m = new MessageData();
-                            m.message = now + " " + VMname + ": is starting";
-                            m.status = status;
-                            messageList.Add(m);
-
-                        }
-                        else if (status == "6")
-                        {
-                            instanceData.movingToPos = false;
-                            // Do nothing this VM is shutting down
-                        }
+                        UpdateVM(instanceData.instance, status);
+                        if (site == "1")
+                            instanceList1.Add(instanceData);
                         else
-                        {
-                            Vector3 pos = sphere.transform.position + UnityEngine.Random.insideUnitSphere * radius / 2;
-                            instanceData.instance = (GameObject)Instantiate(VMprefab, pos, new Quaternion(0, 0, 0, 0));
-                            instanceData.instance.transform.SetParent(sphere.transform, true);
-
-                        }
-
-                        if (status != "6")
-                        {
-                            if (site == "1")
-                                instanceList1.Add(instanceData);
-                            else
-                                instanceList2.Add(instanceData);
-                        }
-
-                        UpdateVM(instanceData, status);
+                            instanceList2.Add(instanceData);
                     }
                 }
                 if (command == "CLOUDINFO_1.0")
@@ -465,52 +402,10 @@ public class DataCentreController : MonoBehaviour
             commands.RemoveAll(AllCommands);
         }
     }
-    private void StartVM(InstanceVMData instanceData)
+    private void UpdateVM(GameObject instance, string status)
     {
-
-        if (instanceData.movingToPos)
-        {
-            if (CompareVectors(instanceData.targetPos, instanceData.instance.transform.position))
-            {
-                // VM is arrived
-                GameObject radiation = instanceData.instance.transform.Find("Radiation").gameObject;
-                ParticleSystem particles = radiation.gameObject.GetComponent<ParticleSystem>();
-                particles.startColor = Color.green;
-                particles.startSize = 1;
-                particles.Stop();
-                particles.Play();
-                instanceData.movingToPos = false;
-                instanceData.instance.transform.SetParent(instanceData.targetSphere.transform, true);
-            }
-            else
-                instanceData.instance.transform.position = Vector3.Lerp(instanceData.instance.transform.position, instanceData.targetPos, Time.deltaTime * 0.2f);
-        }
-    }
-    private int ShutdownVM(GameObject site, List<InstanceVMData> list, int i)
-    {
-        
-        if (list[i].shuttingDown)
-        {
-            if (CompareVectors(list[i].instance.transform.position, site.transform.position))
-            {
-                // VM is arrived
-                Destroy(list[i].instance, 2.0f);
-                list.Remove(list[i]);
-                i--;
-            }
-            else
-                list[i].instance.transform.position = Vector3.Lerp(list[i].instance.transform.position, site.transform.position, Time.deltaTime * 0.2f);
-        }
-        return i;
-    }
-    private void UpdateVM(InstanceVMData vm, string status)
-    {
-        if (vm.instance == null)
-            return;
-
-        GameObject radiation = vm.instance.transform.Find("Radiation").gameObject;
+        GameObject radiation = instance.transform.Find("Radiation").gameObject;
         ParticleSystem particles = radiation.gameObject.GetComponent<ParticleSystem>();
-        particles.startSize = 1;
 
         if (status == "0")
             particles.startColor = Color.green;
@@ -526,33 +421,7 @@ public class DataCentreController : MonoBehaviour
         }
         else if (status == "4")
             particles.startColor = Color.red;
-        else if (status == "5")
-        {
-            particles.startColor = Color.white;
-            particles.startSize = 20;
-            particles.Stop(true);
-            particles.Play(true);
 
-        }
-        else if (status == "6")
-        {
-            if (!vm.shuttingDown)
-            {
-                particles.startColor = Color.magenta;
-                particles.startSize = 20;
-                vm.shuttingDown = true;
-                vm.instance.transform.SetParent(null, true);
-                vm.movingToPos = false;
-                particles.Stop(true);
-                particles.Play(true);
-                MessageData m = new MessageData();
-
-                string now = DateTime.Now.ToString("H:mm:ss");
-                m.message = now + " " + vm.VMname + ": is stopping";
-                m.status = status;
-                messageList.Add(m);
-            }
-        }
     }
 
     private static bool AllCommands(String s)
@@ -762,12 +631,8 @@ public class DataCentreController : MonoBehaviour
                 case "4":
                     style.normal.textColor = Color.red;
                     break;
-
-                default:
-                    style.normal.textColor = Color.white;
-                    break;
             }
-
+            
             GUILayout.Label(messageList[i].message, style);
 //            Vector2 v = style.CalcSize(new GUIContent(messageList[i].message));
 //            if (v.x > width)
