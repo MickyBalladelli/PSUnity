@@ -165,6 +165,13 @@ Set-PSUnityCloud -Session $Session -Site 1 -Name "VM1" -VMHost "host name" -Clus
 ```
 Status is important, 0-4 are color codes (0 being green, and 4 being Red), 5 is a code for a starting VM and 6 is the code for a VM shutting down. Status 5 and 6 trigger animations.
 
+To update the Data Centers 
+
+```
+Set-PSUnityCloudInfo -Session $Session -Site 1 -Name "Data Center 1" -Role "HyperV" -Location "Main Data Center" -Status 1 -Description "123"
+Set-PSUnityCloudInfo -Session $Session -Site 2 -Name "Data Center 2" -Role "Standby" -Location "Backup Data Center" -Status 4 -Description "No issues found"
+```
+
 ## GitHub
 Please ensure you read the LICENSE file, all my code is free under the MIT license, however some of the components while being free, might have a different license.
 
