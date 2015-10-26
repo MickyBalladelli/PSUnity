@@ -1,6 +1,6 @@
 # PSUnity
 
-With this project we will look into integrating Unity with Powershell for creating a multi-purpose monitoring system. This system can be used with SCOM to display information about servers and their status such as Powershell DSC configuration drifts, Active Directory replication, etc.
+With this project we will look into integrating Unity with Powershell for creating a multi-purpose monitoring system. This system can be used with SCOM to display information about servers and their status such as Powershell DSC configuration drifts, status of Active Directory domain controllers, replication, status of various clusters, clouds etc.
 
 
 ## So, What's Unity?
