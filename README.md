@@ -65,6 +65,14 @@ The PSUnity Server can be found under its own folder which contains the entire C
 
 Once started the server will wait for clients and provide data according to requests.
 
+To connect to the PSUnity Server using Powershell you must use the following command:
+```
+$Session = New-PSUnitySession -ComputerName localhost -Port 7777
+```
+and to disconnect:
+```
+Remove-PSUnitySession -Session $Session
+```
 ##PSUnity views
 
 ### Server View
