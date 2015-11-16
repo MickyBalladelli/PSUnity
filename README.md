@@ -111,15 +111,6 @@ Set-PSUnityServer -Session $Session -X -30 -Y 5 -Name Server1 -Role FIM -Locatio
 Set-PSUnityServer -Session $Session -X -20 -Y 5 -Name Server3 -Role IIS -Location Madrid -Status 0 -Description "Server2 has its CPU exceed 90% threshold" 
 ```
 
-Then the result would be this:
-
-![image4](https://balladelli.com/wp-content/uploads/2015/10/fire.png)
-
-Server1 is now on fire: status 4. Note that we changed the role of the server on the fly.
-
-You can move servers around, change their rotation, status location and description, all with Powershell.
-
-If you update a server position R2D2 will find out and go to it, thanks to Unity gameobject.transform class.
 
 ### Globe View
 
@@ -135,11 +126,9 @@ Set-PSUnityCity -Session $Session -Name Chicago -Status 4 -Description "DC does 
 ```
 The descripting string could come from SCOM or other sources.
 
-Here we are changing the status of Chicago:
+Here is an example:
+![image5](https://balladelli.com/wp-content/uploads/2015/11/globe.png)
 
-![image5](https://balladelli.com/wp-content/uploads/2015/10/CHICAGO2.png)
-
-Chicago went red, and was added to the left status list.
 
 On the right hand-side we can see the domains and their statuses, they were added with these commands:
 
@@ -150,10 +139,6 @@ Set-PSUnityDomain -Session $Session -Name asia.ad.local -Status 2 -Description "
 ```
 
 And yes, there are some satellites flying by in low orbit. Courtesy of NASA free 3D models available on their website.
-
-Every now and then an astronaut even flies by the camera. I’m sure at some point we will put the face of someone on it. This astronaut has a much slower orbit making him/her appear only every few minutes, so it’s not too disruptive.
-
-![image6](https://balladelli.com/wp-content/uploads/2015/10/astro.png)
 
 ### Cloud view
 
