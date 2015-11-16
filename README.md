@@ -81,7 +81,7 @@ The view shows a lonely R2D2 and on the left hand-side some text boxes used to c
 
 Since we do have a PSUnity server up and running and a Powershell script was able to send some information, let’s hit Update (maybe I should change that to Connect).
 
-![image3](https://balladelli.com/wp-content/uploads/2015/10/R2D2.png)
+![image3](https://balladelli.com/wp-content/uploads/2015/11/servers.png)
 
 Let’s understand what we are looking at here. The Update button transformed into a Stop button with a countdown. When the countdown is at 0, a refresh happens.
 
