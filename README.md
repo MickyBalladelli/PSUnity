@@ -83,10 +83,6 @@ Since we do have a PSUnity server up and running and a Powershell script was abl
 
 ![image3](https://balladelli.com/wp-content/uploads/2015/11/servers.png)
 
-Let’s understand what we are looking at here. The Update button transformed into a Stop button with a countdown. When the countdown is at 0, a refresh happens.
-
-Clicking on Console showed a window. R2D2 is going around to check each server and retrieve the Description attribute, that value will display in the console. R2D2 figures out where each server is, walks to it, spends a couple of seconds on each server, then moves to the next.
-
 Hitting the “Tab” Key makes the camera follow R2D2. I added this because there might be servers placed outside the view, R2D2 will go to them, and we want to follow him doing so.
 
 Then we see servers of different kinds and something that looks like a platform.
