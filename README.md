@@ -94,7 +94,7 @@ Then we see servers of different kinds and something that looks like a platform.
 The platform is a PSUnity Site added with this line:
 
 ```
-Set-PSUnitySite -Session $Session -name Site3 -X 30 -Y 20 -Width 7 -Height 7 -Location Marcoussis -Description "Domain controllers"
+Set-PSUnitySite -Session $Session -name Site3 -X 30 -Y 20 -Width 7 -Height 7 -Location MainDC -Description "Domain controllers"
 ```
 
 Note that it has a label above with the name and location.
