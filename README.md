@@ -1,4 +1,4 @@
-# PSUnity
+﻿# PSUnity
 
 With this project we will look into integrating Unity with Powershell for creating a multi-purpose monitoring system. This system can be used with SCOM to display information about servers and their status such as Powershell DSC configuration drifts, status of Active Directory domain controllers, replication, status of various clusters, clouds etc.
 
@@ -18,10 +18,6 @@ I wrote PSUnity with just free components from the Asset store, from various 3D 
 ## Why integrate Powershell with Unity?
 
 Unity provides a visually compelling interface, it allows displaying amazing graphics and lets you decide what objects you display and how you display them, you can define how objects interact with other objects, their characteristics, their physics. Pretty much anything goes and the only limitation is really your imagination.
-
-Here is an example where different sites provide a visual color feedback on their status:
-
-![image1](https://balladelli.com/wp-content/uploads/2015/10/Untitle.png)
 
 Powershell can interface with pretty much anything and can retrieve all sort of information.
 
