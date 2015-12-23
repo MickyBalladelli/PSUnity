@@ -10,3 +10,9 @@ G:\github\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\obj\Debug\PSUnityS
 G:\github\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\bin\Debug\PSUnityServer.exe
 G:\github\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\bin\Debug\PSUnityServer.pdb
 G:\github\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\obj\Debug\PSUnityServer.csprojResolveAssemblyReference.cache
+C:\Users\micky\OneDrive\Documents\GitHub\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\bin\Debug\PSUnityServer.exe.config
+C:\Users\micky\OneDrive\Documents\GitHub\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\obj\Debug\PSUnityServer.exe
+C:\Users\micky\OneDrive\Documents\GitHub\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\obj\Debug\PSUnityServer.pdb
+C:\Users\micky\OneDrive\Documents\GitHub\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\bin\Debug\PSUnityServer.exe
+C:\Users\micky\OneDrive\Documents\GitHub\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\bin\Debug\PSUnityServer.pdb
+C:\Users\micky\OneDrive\Documents\GitHub\MickyBalladelli\PSUnity\PSUnityServer\PSUnityServer\obj\Debug\PSUnityServer.csprojResolveAssemblyReference.cache
