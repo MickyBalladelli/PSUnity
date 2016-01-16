@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 18d65020aeb9a2a4193a4b016c43ebd8
-timeCreated: 1442733662
+timeCreated: 1451947788
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - nodePrefab: {fileID: 175962, guid: 878e86f7a071627408e17c91158475f8, type: 2}
+  - dustPrefab: {fileID: 124014, guid: 0adbeb86169a7fb45bfb8aafb71b3760, type: 2}
+  - H2Prefab: {fileID: 196772, guid: 4a6991edb02a0f84d807063b9f4508db, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
