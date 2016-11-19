@@ -37,7 +37,7 @@ public class DataCentreController : MonoBehaviour
 
     private List<string> commands = new List<string>();     // Local copy of commands received, this list is emptied once treated.
 
-    private string message = "";
+    //private string message = "";
     private List<MessageData> messageList = new List<MessageData>();                     // List of messages displayed 
     private List<InstanceVMData> instanceList1 = new List<InstanceVMData>();             // VM data array
     private List<InstanceVMData> instanceList2 = new List<InstanceVMData>();             // VM data array
@@ -207,7 +207,7 @@ public class DataCentreController : MonoBehaviour
         // Check if new commands arrived
         if (mainController && lastUpdate != mainController.lastUpdate)
         {
-            commands.RemoveAll(AllCommands);
+			commands.Clear();
 
             foreach (string c in mainController.commands)
             {
@@ -462,7 +462,7 @@ public class DataCentreController : MonoBehaviour
         }
 		if (commands.Count > 0)
 		{
-            commands.RemoveAll(AllCommands);
+			commands.Clear();
         }
     }
     private void StartVM(InstanceVMData instanceData)
@@ -554,12 +554,7 @@ public class DataCentreController : MonoBehaviour
             }
         }
     }
-
-    private static bool AllCommands(String s)
-    {
-        return true;
-    }
-
+		
     private bool CompareVectors(Vector3 a, Vector3 b)
     {
         return Vector3.SqrMagnitude(a - b) < 1.1F;

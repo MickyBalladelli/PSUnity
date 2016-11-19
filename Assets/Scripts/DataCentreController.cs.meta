@@ -1,17 +1,10 @@
 fileFormatVersion: 2
 guid: 06e30088318b8e94abade21eae1336d1
-timeCreated: 1451947701
+timeCreated: 1444460530
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - truck1: {fileID: 11461448, guid: 60f6d8b0afa93e445ba7e20d852d8ad9, type: 2}
-  - truck2: {fileID: 11407898, guid: 02b4ce934952bf947a7e25281e931993, type: 2}
-  - cluster1: {fileID: 180936, guid: 0d5da35a41e4b3049bf4776879dad7d9, type: 2}
-  - cluster2: {fileID: 122460, guid: d3fe3256164564249b1334f3cc2524cc, type: 2}
-  - sphere1: {fileID: 102006, guid: 531abdbe0962fd8409b6d64ebd80b54e, type: 2}
-  - sphere2: {fileID: 197586, guid: 34388d264d0fd4943ba937b4bc35e433, type: 2}
-  - VMprefab: {fileID: 129122, guid: af6624eea2b66db4da825813737c4c01, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

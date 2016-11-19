@@ -44,7 +44,7 @@ public class GlobeController : MonoBehaviour
             // Check if new commands arrived 
             if (lastUpdate != mainController.lastUpdate)
             {
-                commands.RemoveAll(AllCommands);
+				commands.Clear();
 
                 foreach (string c in mainController.commands)
                 {
@@ -187,13 +187,10 @@ public class GlobeController : MonoBehaviour
         }
         if (commands.Count > 0)
         {
-            commands.RemoveAll(AllCommands);
+			commands.Clear();
         }
     }
-    private static bool AllCommands(String s)
-    {
-        return true;
-    }
+
 
     private void OnGUI()
     {

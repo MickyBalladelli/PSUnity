@@ -37,7 +37,7 @@ public class ServersController : MonoBehaviour
 	private Vector3 initR2D2Pos;
 	private int curInstance = 0;
 	private float countdown = 2.0f;
-	private string message = "";
+	//private string message = "";
 	private List<InstanceData> messageList = new List<InstanceData>();                          // List of messages displayed by R2D2
     private List<InstanceData> instanceList = new List<InstanceData>();             // Server data array
     private List<SiteInstanceData> siteInstanceList = new List<SiteInstanceData>(); // Site data array
@@ -125,7 +125,7 @@ public class ServersController : MonoBehaviour
         // Check if new commands arrived
         if (mainController && lastUpdate != mainController.lastUpdate)
         {
-            commands.RemoveAll(AllCommands);
+			commands.Clear();
 
             foreach (string c in mainController.commands)
             {
@@ -466,13 +466,10 @@ public class ServersController : MonoBehaviour
         }
 		if (commands.Count > 0)
 		{
-            commands.RemoveAll(AllCommands);
+			commands.Clear();
 		}
 	}
-	private static bool AllCommands(String s)
-	{
-		return true;
-	}
+
 
     private bool CompareVectors(Vector3 a, Vector3 b)
     {

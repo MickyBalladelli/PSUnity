@@ -131,6 +131,9 @@ namespace PSUnityServer
         private static List<DomainElement> domains = new List<DomainElement>();
         private static List<CloudElement> VMs = new List<CloudElement>();
         private static List<CloudSiteElement> cloudSites = new List<CloudSiteElement>();
+        private static List<EventElement> events = new List<EventElement>();
+        private static List<EventsByServer> byserver = new List<EventsByServer>();
+        private static List<EventsByAccount> byaccount = new List<EventsByAccount>();
 
 
 
@@ -229,13 +232,32 @@ namespace PSUnityServer
                                         writer.WriteLine(v.command);
                                     }
                                     
-
                                     Console.WriteLine("Sent {0} VMs", VMs.Count);
                                     foreach (CloudSiteElement c in cloudSites)
                                     {
                                         writer.WriteLine(c.command);
                                     }
                                     Console.WriteLine("Sent {0} Cloud sites", cloudSites.Count);
+
+                                    // Send events 
+                                    foreach (EventElement c in events)
+                                    {
+                                        writer.WriteLine(c.command);
+                                    }
+                                    foreach (EventsByServer c in byserver)
+                                    {
+                                        writer.WriteLine(c.command);
+                                    }
+                                    foreach (EventsByAccount c in byaccount)
+                                    {
+                                        writer.WriteLine(c.command);
+                                    }
+                                    // Remove all processed events
+                                    events.Clear();
+                                    byaccount.Clear();
+                                    byserver.Clear();
+
+                                    Console.WriteLine("Sent {0} Events", events.Count);
                                     writer.WriteLine("<END>");
 
                                     break;
@@ -356,6 +378,37 @@ namespace PSUnityServer
                                     {
                                         domains.Add(domain);
                                     }
+                                    break;
+                                }
+                            case "EVENT_1.0":
+                                {
+                                    Console.WriteLine("Received {0} command", command[0]);
+                                    EventElement e = new EventElement();
+                                    e.data.name = command[1];
+                                    e.data.status = command[2];
+                                    e.data.description = command[3];
+                                    e.command = line;                                    
+                                    events.Add(e);
+                                    break;
+                                }
+                            case "EVENT_BYACCOUNT1.0":
+                                {
+                                    Console.WriteLine("Received {0} command", command[0]);
+                                    EventsByAccount e = new EventsByAccount();
+                                    e.account = command[1];
+                                    e.number = command[2];
+                                    e.command = line;
+                                    byaccount.Add(e);
+                                    break;
+                                }
+                            case "EVENT_BYSERVER1.0":
+                                {
+                                    Console.WriteLine("Received {0} command", command[0]);
+                                    EventsByServer e = new EventsByServer();
+                                    e.server = command[1];
+                                    e.number = command[2];
+                                    e.command = line;
+                                    byserver.Add(e);
                                     break;
                                 }
                             case "CLOUD_1.0":
@@ -566,6 +619,32 @@ namespace PSUnityServer
 
     }
     public class Domain
+    {
+        public string name;
+        public string status;
+        public string description;
+    }
+    public class EventElement
+    {
+        public Event data = new Event();
+        public string command;
+
+    }
+    public class EventsByServer
+    {
+        public string server;
+        public string number;
+        public string command;
+
+    }
+    public class EventsByAccount
+    {
+        public string account;
+        public string number;
+        public string command;
+
+    }
+    public class Event
     {
         public string name;
         public string status;

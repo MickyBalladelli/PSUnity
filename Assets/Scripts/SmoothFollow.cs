@@ -25,7 +25,7 @@ public class SmoothFollow : MonoBehaviour
     private bool updatePrev = false;
 
     // Place the script in the Camera-Control group in the component menu
-    [AddComponentMenu("Camera-Control/Smooth Follow")]
+    //[AddComponentMenu("Camera-Control/Smooth Follow")]
 
     public void SetDistance( float d )
     {

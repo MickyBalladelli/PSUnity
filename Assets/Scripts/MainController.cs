@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -26,13 +27,17 @@ public class MainController : MonoBehaviour
     public List<string> commands = new List<string>();
     public string message = "";
     public DateTime lastUpdate = new DateTime();
-    public string serverName = "127.0.0.1", port = "7777",frequency = "10";
+    public string serverName = "127.0.0.1", port = "7777",frequency = "1";
     private Rect windowRect = new Rect(300, 0, 650, 530);
     private bool updating = false;
     IPAddress ipAddress = null;
     Timer updateTimer;
     public DateTime countdown;
-    public Rect domainsRect;
+	public Rect domainsRect;
+	public Rect eventsRect;
+	public Rect singleEventRect;
+	public Rect byServerRect;
+	public Rect byAccountRect;
     public Rect infoRect;
     public Rect vMrect;
     public Rect sitesRect;
@@ -64,8 +69,9 @@ public class MainController : MonoBehaviour
         domainsRect = new Rect(Screen.width - 250, Screen.height - 200, 250, 500);
         sitesRect = new Rect(0, Screen.height/2 - 200, 250, 500);
 
-        Application.LoadLevel(1);
-    }
+        //Application.LoadLevel(1);
+		SceneManager.LoadScene(1);
+	}
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -83,7 +89,7 @@ public class MainController : MonoBehaviour
             GUILayout.Label("Frequency");
             frequency = GUILayout.TextField(frequency);
 
-            if (GUILayout.Button("Update"))
+            if (GUILayout.Button("Connect"))
             {
 
                 IPAddress[] addresses = Dns.GetHostAddresses(serverName);
@@ -132,27 +138,24 @@ public class MainController : MonoBehaviour
 
         if (GUILayout.Button("View"))
         {
-            int displayScene = Application.loadedLevel;
-            displayScene++;
-            if (displayScene >= Application.levelCount)
+			Scene s = SceneManager.GetActiveScene();
+			int displayScene = s.buildIndex;
+			displayScene++;
+
+			if (displayScene >= SceneManager.sceneCountInBuildSettings)
                 displayScene = 1;
-
-            
-            Application.LoadLevel(displayScene);
-        }
+			
+			SceneManager.LoadScene(displayScene);
+		}
     }
 
-    private static bool AllCommands(String s)
-    {
-        return true;
-    }
 
     public void timerUpdate(System.Object stateInfo)
     {
         if (updatingDisplay)
             return;
 
-        commands.RemoveAll(AllCommands);
+		commands.Clear();
 
         if (ipAddress != null )
         {
@@ -195,14 +198,6 @@ public class MainController : MonoBehaviour
             DateTime now = DateTime.UtcNow;
             countdown = now.AddSeconds(int.Parse(frequency) + 1);
 
-            /*UpdateThread updateThread = new UpdateThread();
-            updateThread.port = port;
-            updateThread.ipAddress = ipAddress;
-            updateThread.mainController = this;
-
-
-            update = new Thread(new ThreadStart(updateThread.Update));
-            update.Start();*/
             updating = true;
         }
     }
@@ -290,83 +285,3 @@ public class MainController : MonoBehaviour
     }
 }
 
-class UpdateThread
-{
-    public MainController mainController;
-    public string port;
-    public IPAddress ipAddress;
-    TcpClient tcpClient = new TcpClient();
-
-    public void Update()
-    {
-
-        tcpClient = new TcpClient();
-
-        tcpClient.Connect(ipAddress, int.Parse(port));
-
-        StateObject state = new StateObject();
-        state.stream = tcpClient.GetStream();
-
-        // NegotiateStream is not implemented in Unity :(
-        //try
-        //{
-        /*            NegotiateStream nStream = new NegotiateStream(state.stream);
-
-                    nStream.AuthenticateAsClient((NetworkCredential)CredentialCache.DefaultCredentials, "PSUNITY\\Unity",
-                                                 ProtectionLevel.EncryptAndSign,
-                                                 TokenImpersonationLevel.Identification);
-        */
-        //}
-        //catch (Exception ex)
-        //{
-        //    Debug.LogFormat("{0}", ex.Message);
-        //}
-
-        StreamWriter writer = new StreamWriter(state.stream);
-        StreamReader reader = new StreamReader(state.stream);
-
-        writer.WriteLine("GETALL");
-        writer.Flush();
-        state.bufferSize = tcpClient.ReceiveBufferSize;
-        state.buffer = new byte[state.bufferSize];
-
-
-
-        Thread.Sleep(300);
-
-        String content = String.Empty;
-
-        do
-        {
-             
-            try
-            {
-                content = reader.ReadLine();
-                if (content == null)
-                    break;
-
-                //string[] data = (content).Split('\n');
-
-                mainController.commands.Add(content);
-
-            }
-            catch (Exception e)
-            {
-                Debug.Log("*********************************************");
-                Debug.Log(e);
-                break;
-            }
-
-
-        } while (content != null);
-
-        reader.Dispose();
-        writer.Dispose();
-        state.stream.Close();
-        tcpClient.Close();
-
-        mainController.lastUpdate = DateTime.Now;
-        DateTime now = DateTime.UtcNow;
-        mainController.countdown = now.AddSeconds(int.Parse(mainController.frequency) + 1);
-    }
-}

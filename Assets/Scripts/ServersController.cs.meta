@@ -1,15 +1,11 @@
 fileFormatVersion: 2
 guid: 9009ad1842a0ea347913f4aff091f487
-timeCreated: 1451947292
+timeCreated: 1442519800
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - serverPrefab0: {fileID: 183384, guid: 0cdbe3e1e5fa3fb4c9c02a96cea6ae91, type: 2}
-  - serverPrefab1: {fileID: 132240, guid: 8fac8b3290aacda42a2a736e4621de4d, type: 2}
-  - serverPrefab2: {fileID: 119094, guid: 90e76fae6bb9fa14ea8408906ef33ff5, type: 2}
-  - sitePrefab: {fileID: 151176, guid: 9c29811f60d48d142be2c9ae7928ad8b, type: 2}
-  - canvasPrefab: {fileID: 185040, guid: 3c521092d3664d1449f37e4acf962c08, type: 2}
+  - thePrefab: {fileID: 152534, guid: 0764dcac724cf68489d1963af8293c30, type: 2}
   - skin: {fileID: 11400000, guid: f75d4cb9493f8dd4ca06e27761291d4c, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
