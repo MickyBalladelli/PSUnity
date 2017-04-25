@@ -120,7 +120,7 @@ You can add or update a description by calling
 ```
 Set-PSUnityCity -Session $Session -Name Chicago -Status 4 -Description "DC does not respond"
 ```
-The descripting string could come from SCOM or other sources.
+The description string could come from SCOM or other sources.
 
 Here is an example:
 ![image5](https://balladelli.com/wp-content/uploads/2015/11/globe.png)
