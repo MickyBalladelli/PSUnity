@@ -5,9 +5,9 @@ With this project we will look into integrating Unity with Powershell for creati
 
 ## So, What's Unity?
 
-Unity is super cool! Itís a 3D engine and an integrated development environment for building games. It supports Javascript and C# and can be used for creating applications for a variety of platforms such as Windows, Unix, Mac OS, Android, IOS, and a bunch of consoles.
+Unity is super cool! It‚Äôs a 3D engine and an integrated development environment for building games. It supports Javascript and C# and can be used for creating applications for a variety of platforms such as Windows, Unix, Mac OS, Android, IOS, and a bunch of consoles.
 
-Itís quite easy to learn Unity, and the on-line documentation, forums, and Youtube is full of tutorials and examples. One of the tutorials shows you how to create a full asteroids game in less than 2 hours. Which is pretty amazing.
+It‚Äôs quite easy to learn Unity, and the on-line documentation, forums, and Youtube is full of tutorials and examples. One of the tutorials shows you how to create a full asteroids game in less than 2 hours. Which is pretty amazing.
 
 Unity provides a number of namespaces for C#, these can be used to manipulate objects such as providing behavior, animations, effects. Its user interface is quite complete, and object manipulation is quite intuitive.
 
@@ -23,9 +23,9 @@ Powershell can interface with pretty much anything and can retrieve all sort of 
 
 Driving Unity from Powershell makes sense as it provides a lot of flexibility in how the data is retrieved and updated in the PSUnity environment.
 
-For example, we could use Powershell to connect to SCOM and retrieve the status of monitored systems. These monitored systems can be of any type, itís then up to you to decide what and how you represent your findings within Unity. As we will see I chose a number of scenarios to display different kinds of objects.
+For example, we could use Powershell to connect to SCOM and retrieve the status of monitored systems. These monitored systems can be of any type, it‚Äôs then up to you to decide what and how you represent your findings within Unity. As we will see I chose a number of scenarios to display different kinds of objects.
 
-Itís true that since Unity supports C#, I could have used .NET and C# to retrieve information about servers and display it. But then only Devs would have used PSUnity, and I really want IT pros to use it. IT pros use Powershell, not C#.
+It‚Äôs true that since Unity supports C#, I could have used .NET and C# to retrieve information about servers and display it. But then only Devs would have used PSUnity, and I really want IT pros to use it. IT pros use Powershell, not C#.
 
 ## Structure of PSUnity
 
@@ -44,7 +44,7 @@ PSUnity comes with a number of cmdlets which are used for updating the PSUnity s
 
 *New-PSUnitySession: creates a new PSUnity session. Once executed, Powershell is connected to PSUnity.
 *Remove-PSUnitySession: closes the PSUnity session
-*Set-PSUnityServer: creates or modifies a server object in PSUnity. Attributes are name, location, role, status (value between 0-4), description, position (x, y in 2D coordinates), rotation. If the server object does not exist, it is created. If the object exists it is updated. Objects in PSUnity are uniquely identified by their name attribute. The status defines the behavior of the server object. If the value of status is 2, there are sparks on the keyboard. 3 means smoke comes out of the server, and if itís 4, the server is on fire. The color of the name of the server reflects the status too: Green, Blue, Yellow, Orange, Red. Servers are visible only in the Servers view.
+*Set-PSUnityServer: creates or modifies a server object in PSUnity. Attributes are name, location, role, status (value between 0-4), description, position (x, y in 2D coordinates), rotation. If the server object does not exist, it is created. If the object exists it is updated. Objects in PSUnity are uniquely identified by their name attribute. The status defines the behavior of the server object. If the value of status is 2, there are sparks on the keyboard. 3 means smoke comes out of the server, and if it‚Äôs 4, the server is on fire. The color of the name of the server reflects the status too: Green, Blue, Yellow, Orange, Red. Servers are visible only in the Servers view.
 *Set-PSUnitySite: creates or modifies a platform that can be used to group servers. Sites are visible in the Servers view. A Site has a label that displays its name and location.
 *Set-PSUnityCity: Cities are predefined in PSUnity and are all disabled by default. This cmdlet enables a city (i.e. make it visible) in the Globe view. A city can receive an alternate name, this can be useful if you are using a naming convention for locations, such as location code or data centre name. Cities also have a status and description. The status defines the color of the object representing the city, Green, Blue, Yellow, Orange and Red.
 *Set-PSUnityDomain: these are representing Active Directory domains.
@@ -55,7 +55,7 @@ See ./Powershell/TestPSUnity.ps1 for an example of using the cmdlets
 
 ## The PSUnity server
 
-The PSUnity server is actually two servers in one. It accepts commands received by PSUnity cmdlets and maintains and updates the list of monitored objects such as servers, cities, sites, domains etc., it also acts as a policy server for the Unity Web client, without which it wouldnít be able to connect to a port to retrieve object information. This is a security feature of Unity for preventing malicious games to send information to a third party while you are playing.
+The PSUnity server is actually two servers in one. It accepts commands received by PSUnity cmdlets and maintains and updates the list of monitored objects such as servers, cities, sites, domains etc., it also acts as a policy server for the Unity Web client, without which it wouldn‚Äôt be able to connect to a port to retrieve object information. This is a security feature of Unity for preventing malicious games to send information to a third party while you are playing.
 
 The PSUnity Server can be found under its own folder which contains the entire C# solution: ./PSUnityServer
 
@@ -79,11 +79,11 @@ When the PSUnity client starts, it displays the Server view, disconnected.
 
 The view shows a lonely R2D2 and on the left hand-side some text boxes used to connect to a PSUnity server and define a refresh frequency.
 
-Since we do have a PSUnity server up and running and a Powershell script was able to send some information, letís hit Update (maybe I should change that to Connect).
+Since we do have a PSUnity server up and running and a Powershell script was able to send some information, let‚Äôs hit Update (maybe I should change that to Connect).
 
 ![image3](https://balladelli.com/wp-content/uploads/2015/11/servers.png)
 
-Hitting the ìTabî Key makes the camera follow R2D2. I added this because there might be servers placed outside the view, R2D2 will go to them, and we want to follow him doing so.
+Hitting the ‚ÄúTab‚Äù Key makes the camera follow R2D2. I added this because there might be servers placed outside the view, R2D2 will go to them, and we want to follow him doing so.
 
 Then we see servers of different kinds and something that looks like a platform.
 
@@ -160,13 +160,4 @@ Set-PSUnityCloudInfo -Session $Session -Site 2 -Name "Data Center 2" -Role "Stan
 ## GitHub
 Please ensure you read the LICENSE file, all my code is free under the MIT license, however some of the components while being free, might have a different license.
 
-Check the releases tab as I will be providing new releases as the project makes progress. 
 
-Enjoy,
-
-
-Micky Balladelli
-
-micky@balladelli.com
-
-Twitter: @mickyballadelli
